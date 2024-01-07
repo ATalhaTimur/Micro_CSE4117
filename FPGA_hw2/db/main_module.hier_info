@@ -2,17 +2,17 @@
 clk => clk.IN4
 left_button => left_button.IN1
 right_button => right_button.IN1
-grounds[0] <= sevensegment:ss1.grounds
-grounds[1] <= sevensegment:ss1.grounds
-grounds[2] <= sevensegment:ss1.grounds
-grounds[3] <= sevensegment:ss1.grounds
-display[0] <= sevensegment:ss1.display
-display[1] <= sevensegment:ss1.display
-display[2] <= sevensegment:ss1.display
-display[3] <= sevensegment:ss1.display
-display[4] <= sevensegment:ss1.display
-display[5] <= sevensegment:ss1.display
-display[6] <= sevensegment:ss1.display
+grounds[0] << sevensegment:ss1.grounds
+grounds[1] << sevensegment:ss1.grounds
+grounds[2] << sevensegment:ss1.grounds
+grounds[3] << sevensegment:ss1.grounds
+display[0] << sevensegment:ss1.display
+display[1] << sevensegment:ss1.display
+display[2] << sevensegment:ss1.display
+display[3] << sevensegment:ss1.display
+display[4] << sevensegment:ss1.display
+display[5] << sevensegment:ss1.display
+display[6] << sevensegment:ss1.display
 
 
 |main_module|sevensegment:ss1
