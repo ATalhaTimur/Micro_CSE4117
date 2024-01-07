@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_module
-Sun Jan 07 19:08:09 2024
+Sun Jan 07 19:25:12 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -45,13 +45,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 07 19:08:09 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 07 19:25:12 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; main_module                                ;
 ; Top-level Entity Name              ; main_module                                ;
 ; Family                             ; Cyclone IV E                               ;
 ; Total logic elements               ; 4,280                                      ;
-;     Total combinational functions  ; 2,223                                      ;
+;     Total combinational functions  ; 2,200                                      ;
 ;     Dedicated logic registers      ; 2,295                                      ;
 ; Total registers                    ; 2295                                       ;
 ; Total pins                         ; 14                                         ;
@@ -167,17 +167,17 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/FPGA_hw2/main_module.sv  ;         ;
-; switchbank.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/FPGA_hw2/switchbank.sv   ;         ;
-; sevensegment.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/FPGA_hw2/sevensegment.sv ;         ;
-; bird.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/FPGA_hw2/bird.sv         ;         ;
-; ram.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/talha/Desktop/FPGA_hw2/ram.dat         ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/main_module.sv  ;         ;
+; switchbank.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/switchbank.sv   ;         ;
+; sevensegment.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/sevensegment.sv ;         ;
+; bird.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/bird.sv         ;         ;
+; ram.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/ram.dat         ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -187,14 +187,14 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Estimated Total logic elements              ; 4,280     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2223      ;
+; Total combinational functions               ; 2200      ;
 ; Logic element usage by number of LUT inputs ;           ;
 ;     -- 4 input functions                    ; 1782      ;
 ;     -- 3 input functions                    ; 232       ;
-;     -- <=2 input functions                  ; 209       ;
+;     -- <=2 input functions                  ; 186       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2156      ;
+;     -- normal mode                          ; 2133      ;
 ;     -- arithmetic mode                      ; 67        ;
 ;                                             ;           ;
 ; Total registers                             ; 2295      ;
@@ -205,8 +205,8 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 2289      ;
-; Total fan-out                               ; 15030     ;
-; Average fan-out                             ; 3.31      ;
+; Total fan-out                               ; 15007     ;
+; Average fan-out                             ; 3.32      ;
 +---------------------------------------------+-----------+
 
 
@@ -215,7 +215,7 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name            ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------+--------------+
-; |main_module               ; 2223 (1725)       ; 2295 (2080)  ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |main_module                   ; work         ;
+; |main_module               ; 2200 (1702)       ; 2295 (2080)  ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |main_module                   ; work         ;
 ;    |bird:br1|              ; 459 (459)         ; 157 (157)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|bird:br1          ; work         ;
 ;    |sevensegment:ss1|      ; 35 (35)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:ss1  ; work         ;
 ;    |switchbank:lb_sw1|     ; 2 (2)             ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|switchbank:lb_sw1 ; work         ;
@@ -325,7 +325,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jan 07 19:08:01 2024
+    Info: Processing started: Sun Jan 07 19:25:05 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hw2 -c main_module
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file main_module.sv
@@ -338,7 +338,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file bird.sv
     Info (12023): Found entity 1: bird
 Warning (10236): Verilog HDL Implicit Net warning at switchbank.sv(45): created implicit net for "ack_sw"
 Info (12127): Elaborating entity "main_module" for the top level hierarchy
-Warning (10850): Verilog HDL warning at main_module.sv(129): number of words (40) in memory file does not match the number of elements in the address range [0:127]
+Warning (10850): Verilog HDL warning at main_module.sv(129): number of words (37) in memory file does not match the number of elements in the address range [0:127]
 Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:ss1"
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(15): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(19): truncated value with size 32 to match size of target (26)
@@ -355,7 +355,7 @@ Warning (10230): Verilog HDL assignment warning at bird.sv(150): truncated value
 Warning (10230): Verilog HDL assignment warning at bird.sv(151): truncated value with size 32 to match size of target (16)
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/talha/Desktop/FPGA_hw2/db/hw2.ram0_main_module_7115dfaa.hdl.mif" contains "don't care" values -- overwriting them with 0s
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_hw2/db/hw2.ram0_main_module_7115dfaa.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 12 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -366,8 +366,8 @@ Info (21057): Implemented 4338 device resources after synthesis - the final reso
     Info (21061): Implemented 4324 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 14 warnings
     Info: Peak virtual memory: 4686 megabytes
-    Info: Processing ended: Sun Jan 07 19:08:09 2024
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Sun Jan 07 19:25:12 2024
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 

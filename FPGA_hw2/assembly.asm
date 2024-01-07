@@ -21,10 +21,7 @@ right	ldi 0 0x900
 	jmp loop
 left	ldi 0 0x900
 	ld 0 0
-	inc 0
-	inc 0
-	inc 0
-	inc 0
+	add 0 0 0	
 	ldi 1 0xb00
 	st 1 0
 	ldi 1 0x900
