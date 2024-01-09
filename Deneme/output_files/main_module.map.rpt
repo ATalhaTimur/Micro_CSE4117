@@ -1,5 +1,5 @@
 Analysis & Synthesis report for main_module
-Tue Jan 09 05:02:33 2024
+Tue Jan 09 19:04:06 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -20,6 +20,7 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Elapsed Time Per Partition
  14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,16 +46,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 09 05:02:33 2024      ;
+; Analysis & Synthesis Status        ; Successful - Tue Jan 09 19:04:06 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; main_module                                ;
 ; Top-level Entity Name              ; main_module                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 4,210                                      ;
-;     Total combinational functions  ; 2,149                                      ;
-;     Dedicated logic registers      ; 2,250                                      ;
-; Total registers                    ; 2250                                       ;
-; Total pins                         ; 13                                         ;
+; Total logic elements               ; 4,316                                      ;
+;     Total combinational functions  ; 2,295                                      ;
+;     Dedicated logic registers      ; 2,299                                      ;
+; Total registers                    ; 2299                                       ;
+; Total pins                         ; 14                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -167,17 +168,18 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/main_module.sv    ;         ;
-; switchbank_int.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/switchbank_int.sv ;         ;
-; mammal.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/mammal.sv         ;         ;
-; sevensegment.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/sevensegment.sv   ;         ;
-; ram.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/ram.dat           ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                             ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
+; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/main_module.sv                  ;         ;
+; switchbank_int.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/switchbank_int.sv               ;         ;
+; mammal.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/mammal.sv                       ;         ;
+; sevensegment.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/sevensegment.sv                 ;         ;
+; output_files/switchbank_poll.sv  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/output_files/switchbank_poll.sv ;         ;
+; ram.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/ram.dat                         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -185,71 +187,72 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,210     ;
+; Estimated Total logic elements              ; 4,316     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2149      ;
+; Total combinational functions               ; 2295      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1772      ;
-;     -- 3 input functions                    ; 236       ;
-;     -- <=2 input functions                  ; 141       ;
+;     -- 4 input functions                    ; 1788      ;
+;     -- 3 input functions                    ; 248       ;
+;     -- <=2 input functions                  ; 259       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2082      ;
+;     -- normal mode                          ; 2228      ;
 ;     -- arithmetic mode                      ; 67        ;
 ;                                             ;           ;
-; Total registers                             ; 2250      ;
-;     -- Dedicated logic registers            ; 2250      ;
+; Total registers                             ; 2299      ;
+;     -- Dedicated logic registers            ; 2299      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 13        ;
+; I/O pins                                    ; 14        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2244      ;
-; Total fan-out                               ; 14785     ;
-; Average fan-out                             ; 3.34      ;
+; Maximum fan-out                             ; 2293      ;
+; Total fan-out                               ; 15178     ;
+; Average fan-out                             ; 3.28      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
-; |main_module               ; 2149 (1624)       ; 2250 (2064)  ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |main_module                    ; work         ;
-;    |mammal:m1|             ; 488 (488)         ; 161 (161)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:m1          ; work         ;
-;    |sevensegment:ss1|      ; 35 (35)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:ss1   ; work         ;
-;    |switchbank_int:sw1|    ; 2 (2)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|switchbank_int:sw1 ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name              ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
+; |main_module               ; 2295 (1759)       ; 2299 (2080)  ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |main_module                     ; work         ;
+;    |mammal:m1|             ; 494 (494)         ; 161 (161)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:m1           ; work         ;
+;    |sevensegment:ss1|      ; 35 (35)           ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:ss1    ; work         ;
+;    |switchbank_int:sw1|    ; 4 (4)             ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|switchbank_int:sw1  ; work         ;
+;    |switchbank_poll:sw2|   ; 3 (3)             ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|switchbank_poll:sw2 ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                              ;
-+----------------------------------------+----------------------------------------+
-; Register name                          ; Reason for Removal                     ;
-+----------------------------------------+----------------------------------------+
-; switchbank_int:sw1|data_reg[0..15]     ; Stuck at GND due to stuck port data_in ;
-; mammal:m1|interruptreg[1,7..10]        ; Stuck at VCC due to stuck port data_in ;
-; mammal:m1|interruptreg[3]              ; Stuck at GND due to stuck port data_in ;
-; mammal:m1|interruptreg[4..6]           ; Stuck at VCC due to stuck port data_in ;
-; mammal:m1|interruptreg[11]             ; Stuck at GND due to stuck port data_in ;
-; sevensegment:ss1|clk1[16..25]          ; Lost fanout                            ;
-; Total Number of Removed Registers = 36 ;                                        ;
-+----------------------------------------+----------------------------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++----------------------------------------+-----------------------------------------------+
+; Register name                          ; Reason for Removal                            ;
++----------------------------------------+-----------------------------------------------+
+; switchbank_poll:sw2|status_reg[2..15]  ; Merged with switchbank_poll:sw2|status_reg[1] ;
+; switchbank_poll:sw2|status_reg[1]      ; Stuck at GND due to stuck port data_in        ;
+; mammal:m1|interruptreg[9]              ; Stuck at VCC due to stuck port data_in        ;
+; mammal:m1|interruptreg[11]             ; Stuck at GND due to stuck port data_in        ;
+; mammal:m1|interruptreg[1]              ; Stuck at VCC due to stuck port data_in        ;
+; mammal:m1|interruptreg[3]              ; Stuck at GND due to stuck port data_in        ;
+; mammal:m1|interruptreg[4..8,10]        ; Stuck at VCC due to stuck port data_in        ;
+; switchbank_poll:sw2|data_reg[0,2]      ; Lost fanout                                   ;
+; sevensegment:ss1|clk1[16..25]          ; Lost fanout                                   ;
+; Total Number of Removed Registers = 37 ;                                               ;
++----------------------------------------+-----------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                    ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------------+
-; Register name                  ; Reason for Removal        ; Registers Removed due to This Register                                            ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------------+
-; switchbank_int:sw1|data_reg[4] ; Stuck at GND              ; mammal:m1|interruptreg[7], mammal:m1|interruptreg[8], mammal:m1|interruptreg[9],  ;
-;                                ; due to stuck port data_in ; mammal:m1|interruptreg[10], mammal:m1|interruptreg[6], mammal:m1|interruptreg[11] ;
-; switchbank_int:sw1|data_reg[1] ; Stuck at GND              ; mammal:m1|interruptreg[1]                                                         ;
-;                                ; due to stuck port data_in ;                                                                                   ;
-; switchbank_int:sw1|data_reg[3] ; Stuck at GND              ; mammal:m1|interruptreg[3]                                                         ;
-;                                ; due to stuck port data_in ;                                                                                   ;
-+--------------------------------+---------------------------+-----------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                      ;
++-----------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name                     ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++-----------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; switchbank_poll:sw2|status_reg[1] ; Stuck at GND              ; mammal:m1|interruptreg[1], mammal:m1|interruptreg[3], mammal:m1|interruptreg[4], ;
+;                                   ; due to stuck port data_in ; mammal:m1|interruptreg[5], mammal:m1|interruptreg[6], mammal:m1|interruptreg[7], ;
+;                                   ;                           ; switchbank_poll:sw2|data_reg[2]                                                  ;
++-----------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -257,12 +260,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2250  ;
+; Total registers                              ; 2299  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2218  ;
+; Number of registers using Clock Enable       ; 2264  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -275,7 +278,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; sevensegment:ss1|grounds[1]            ; 2       ;
 ; sevensegment:ss1|grounds[2]            ; 2       ;
 ; sevensegment:ss1|grounds[3]            ; 2       ;
-; Total number of inverted registers = 3 ;         ;
+; ss7_out[0]                             ; 1       ;
+; input_arg[0]                           ; 2       ;
+; Total number of inverted registers = 5 ;         ;
 +----------------------------------------+---------+
 
 
@@ -285,29 +290,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; 33:1               ; 2 bits    ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |main_module|mammal:m1|state[1]       ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[6][5]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[5][12] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[6][6]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[5][13] ;
 ; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[4][14] ;
 ; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[3][14] ;
 ; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[2][14] ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[1][5]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[0][4]  ;
-; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|pc[11]         ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][15] ;
-; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][6]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|sevensegment:ss1|Mux2    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main_module|data_in[1]               ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main_module|data_in[14]              ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |main_module|data_in[0]               ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux41          ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux21          ;
-; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Mux83          ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[1][11] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[0][9]  ;
+; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|pc[5]          ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][14] ;
+; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][10] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|sevensegment:ss1|Mux3    ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux39          ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux29          ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Mux80          ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
-; 18:1               ; 11 bits   ; 132 LEs       ; 22 LEs               ; 110 LEs                ; No         ; |main_module|mammal:m1|Selector142    ;
+; 18:1               ; 11 bits   ; 132 LEs       ; 22 LEs               ; 110 LEs                ; No         ; |main_module|mammal:m1|Selector144    ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 56 LEs               ; 0 LEs                  ; No         ; |main_module|data_in[14]              ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main_module|mammal:m1|Add5           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
-; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Selector130    ;
+; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Selector128    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; No         ; |main_module|mammal:m1|Add4           ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; No         ; |main_module|mammal:m1|Add4           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
@@ -318,7 +321,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:07     ;
 +----------------+--------------+
 
 
@@ -328,7 +331,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Tue Jan 09 05:02:26 2024
+    Info: Processing started: Tue Jan 09 19:03:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Deneme -c main_module
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file main_module.sv
@@ -339,12 +342,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file mammal.
     Info (12023): Found entity 1: mammal
 Info (12021): Found 1 design units, including 1 entities, in source file sevensegment.sv
     Info (12023): Found entity 1: sevensegment
-Warning (10236): Verilog HDL Implicit Net warning at main_module.sv(39): created implicit net for "ackx"
+Info (12021): Found 1 design units, including 1 entities, in source file output_files/switchbank_poll.sv
+    Info (12023): Found entity 1: switchbank_poll
+Warning (10236): Verilog HDL Implicit Net warning at switchbank_poll.sv(45): created implicit net for "ack_sw"
 Info (12127): Elaborating entity "main_module" for the top level hierarchy
-Warning (10850): Verilog HDL warning at main_module.sv(123): number of words (24) in memory file does not match the number of elements in the address range [0:127]
+Warning (10850): Verilog HDL warning at main_module.sv(174): number of words (45) in memory file does not match the number of elements in the address range [0:127]
 Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:ss1"
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(15): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(19): truncated value with size 32 to match size of target (26)
+Info (12128): Elaborating entity "switchbank_poll" for hierarchy "switchbank_poll:sw2"
+Warning (10036): Verilog HDL or VHDL warning at switchbank_poll.sv(45): object "ack_sw" assigned a value but never read
 Info (12128): Elaborating entity "switchbank_int" for hierarchy "switchbank_int:sw1"
 Info (12128): Elaborating entity "mammal" for hierarchy "mammal:m1"
 Warning (10230): Verilog HDL assignment warning at mammal.sv(56): truncated value with size 32 to match size of target (12)
@@ -364,17 +371,24 @@ Info (276014): Found 1 instances of uninferred RAM logic
     Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/db/Deneme.ram0_main_module_7115dfaa.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 10 registers lost all their fanouts during netlist optimizations.
+Info (17049): 12 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/output_files/main_module.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4267 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
+Info (21057): Implemented 4374 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
     Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 4254 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 18 warnings
+    Info (21061): Implemented 4360 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 4686 megabytes
-    Info: Processing ended: Tue Jan 09 05:02:33 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Processing ended: Tue Jan 09 19:04:06 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:07
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/Deneme/output_files/main_module.map.smsg.
 
 

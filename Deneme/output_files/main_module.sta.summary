@@ -3,16 +3,16 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -10.028
-TNS   : -16163.300
+Slack : -10.344
+TNS   : -16666.221
 
 Type  : Slow 1200mV 85C Model Setup 'sevensegment:ss1|clk1[15]'
-Slack : 0.174
+Slack : 0.178
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.069
-TNS   : -0.069
+Slack : 0.009
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.358
@@ -20,23 +20,23 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2247.000
+TNS   : -2296.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000
 TNS   : -6.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -8.943
-TNS   : -14375.406
+Slack : -9.153
+TNS   : -14787.071
 
 Type  : Slow 1200mV 0C Model Setup 'sevensegment:ss1|clk1[15]'
 Slack : 0.258
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.034
-TNS   : -0.034
+Slack : 0.039
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.312
@@ -44,23 +44,23 @@ TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2247.000
+TNS   : -2296.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000
 TNS   : -6.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -5.412
-TNS   : -8676.969
+Slack : -5.634
+TNS   : -8761.072
 
 Type  : Fast 1200mV 0C Model Setup 'sevensegment:ss1|clk1[15]'
-Slack : 0.536
+Slack : 0.538
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.046
-TNS   : -0.046
+Slack : -0.006
+TNS   : -0.006
 
 Type  : Fast 1200mV 0C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.188
@@ -68,7 +68,7 @@ TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2376.441
+TNS   : -2427.893
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000

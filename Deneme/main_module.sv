@@ -2,8 +2,9 @@ module main_module (
                         input clk,
                         //---input from switchbank
                                   //input from 16-bit switchboard
-                        input  enter_key,               //enter button
-                        //---output to seven segment display
+								input left_button,
+								input right_button,             //enter button
+              
                         output logic [3:0] grounds,
                         output logic [6:0] display
                    );
@@ -12,7 +13,9 @@ module main_module (
 localparam    BEGINMEM = 12'h000,
               ENDMEM = 12'h7ff,
               SWITCHBANK = 12'h900,               
-              SEVENSEG = 12'hb00;
+              SEVENSEG = 12'hb00,
+				  SWITCHBANK_STATUS_left=12'h901,
+              SWITCHBANK_STATUS_right=12'h903;
 
 //====memory chip==============
 logic [15:0] memory [0:127]; 
@@ -21,23 +24,53 @@ logic [15:0] memory [0:127];
 logic [15:0] data_out;
 logic [15:0] data_in;
 logic [11:0] address;
-logic [15:0] switches;
 logic memwt;
 logic INT;    //interrupt pin
 logic intack; //interrupt acknowledgement
 logic switch_interrupt;
 
 //======ss7 and switchbank=====
-logic [15:0] ss7_out, switch_in;
+logic [15:0] ss7_out;
+logic [15:0] input_arg;
+logic [15:0] switch_in_left;
+logic [15:0] switch_in_right;
+logic ackx;
+
 //====== pic ===============
 logic irq0, irq1, irq2, irq3, irq4, irq5, irq6, irq7;
 
 //=====components==================
-sevensegment ss1 (.din(ss7_out), .grounds(grounds), .display(display), .clk(clk));
+sevensegment ss1 (
+.din(ss7_out), 
+.grounds(grounds), 
+.display(display), 
+.clk(clk));
 
+switchbank_poll sw2(
+	.clk(clk),
+	.switches(input_arg),
+	.enter_key(left_button),
+	.a0(address[0]),
+	.ack(ackx),
+	.data_out(switch_in_left) // burada devicedan okunan deger veriliyor statusreg ya da datareg olarak dataout guncellenecek
+);
 
-switchbank_int  sw1(.clk(clk), .switches(switches), .enter_key(enter_key),  .ack(ackx) , .interrupt(switch_interrupt),.data_reg(switch_in));
-mammal m1( .clk(clk), .data_in(data_in), .data_out(data_out), .address(address), .memwt(memwt),.INT(INT), .intack(intack));
+switchbank_int  sw1(
+.clk(clk), 
+.switches(input_arg), 
+.enter_key(right_button),  
+.ack(ackx) , 
+.interrupt(switch_interrupt),
+.data_reg(switch_in_right));
+
+mammal m1( 
+.clk(clk), 
+.data_in(data_in), 
+.data_out(data_out), 
+.address(address), 
+.memwt(memwt),
+.INT(INT), 
+.intack(intack));
 
 
 
@@ -65,12 +98,25 @@ ackx = 0;
         begin
             ackx = 0;
             if ( (BEGINMEM<=address) && (address<=ENDMEM) )
-                    data_in=memory[address];
+						 begin
+							data_in=memory[address];
+						  end
             else if (address==SWITCHBANK)
                     begin
-                         ackx = 1;              //with appropriate a0 resets the ready flag    
-                         data_in = switch_in;   //a0 will determine if we read data or status
+                         ackx = 1;              
+                         data_in = input_arg;   
                     end
+				 else if (address == SWITCHBANK_STATUS_left)
+							 begin
+									ackx = 1;                 
+									data_in <= switch_in_left;   
+								end
+				else if (address == SWITCHBANK_STATUS_right)
+								begin
+									ackx = 1;             
+									data_in = switch_in_right;   
+								end				
+				  
             else
                       data_in=16'hf345; //last else to generate combinatorial circuit.
                 
@@ -105,9 +151,13 @@ always_ff @(posedge clk) //data output port of the cpu
 					begin
 						memory[address] <= data_out;
 					end
-
+					
+				else if (SWITCHBANK == address)
+					begin
+						input_arg <= data_out;
+					end
 				
-				else if (SEVENSEG == address) // uretilen address sevenseg addressi haliyle data sevensegmente bastirilacak
+				else if (SEVENSEG == address) 
 					begin
 						ss7_out <= data_out;
 					end
@@ -119,7 +169,8 @@ always_ff @(posedge clk) //data output port of the cpu
 initial 
     begin
          switch_interrupt =0;
-         ss7_out =16'b0;
+         ss7_out=16'h0001;
+		   input_arg=16'h0001;
         $readmemh("ram.dat", memory);
     end
 endmodule
