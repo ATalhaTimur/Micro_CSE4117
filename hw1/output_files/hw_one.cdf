@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/talha/Desktop/fpgaProject/hw1/output_files/") File("hw_one.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/hw1/output_files/") File("hw_one.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

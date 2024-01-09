@@ -29,7 +29,7 @@
 (DELAYFILE
   (SDFVERSION "2.1")
   (DESIGN "main_module")
-  (DATE "01/07/2024 19:43:32")
+  (DATE "01/09/2024 00:38:48")
   (VENDOR "Altera")
   (PROGRAM "Quartus II 64-Bit")
   (VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition")
@@ -6042,7 +6042,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE rb_sw1\|pressed\[0\]\~feeder)
+    (INSTANCE sw2\|pressed\[0\]\~feeder)
     (DELAY
       (ABSOLUTE
         (PORT datad (1653:1653:1653) (1577:1577:1577))
@@ -6052,7 +6052,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|pressed\[0\])
+    (INSTANCE sw2\|pressed\[0\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1530:1530:1530) (1545:1545:1545))
@@ -6066,7 +6066,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE rb_sw1\|pressed\[1\]\~feeder)
+    (INSTANCE sw2\|pressed\[1\]\~feeder)
     (DELAY
       (ABSOLUTE
         (PORT datad (237:237:237) (314:314:314))
@@ -6076,7 +6076,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|pressed\[1\])
+    (INSTANCE sw2\|pressed\[1\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1530:1530:1530) (1545:1545:1545))
@@ -6090,7 +6090,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE rb_sw1\|status_reg\~0)
+    (INSTANCE sw2\|status_reg\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (1724:1724:1724) (1770:1770:1770))
@@ -6105,7 +6105,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|status_reg\[0\])
+    (INSTANCE sw2\|status_reg\[0\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1530:1530:1530) (1545:1545:1545))
@@ -6119,7 +6119,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE rb_sw1\|always0\~0)
+    (INSTANCE sw2\|always0\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (265:265:265) (353:353:353))
@@ -6133,7 +6133,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[3\])
+    (INSTANCE sw2\|data_reg\[3\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -6169,7 +6169,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE lb_sw1\|pressed\[0\]\~feeder)
+    (INSTANCE sw1\|pressed\[0\]\~feeder)
     (DELAY
       (ABSOLUTE
         (PORT datad (3236:3236:3236) (3497:3497:3497))
@@ -6179,7 +6179,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|pressed\[0\])
+    (INSTANCE sw1\|pressed\[0\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1548:1548:1548) (1567:1567:1567))
@@ -6193,7 +6193,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|pressed\[1\])
+    (INSTANCE sw1\|pressed\[1\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1530:1530:1530) (1545:1545:1545))
@@ -6207,7 +6207,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE lb_sw1\|status_reg\~0)
+    (INSTANCE sw1\|status_reg\~0)
     (DELAY
       (ABSOLUTE
         (PORT dataa (880:880:880) (974:974:974))
@@ -6222,7 +6222,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|status_reg\[0\])
+    (INSTANCE sw1\|status_reg\[0\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1530:1530:1530) (1545:1545:1545))
@@ -6236,7 +6236,7 @@
   )
   (CELL
     (CELLTYPE "cycloneive_lcell_comb")
-    (INSTANCE lb_sw1\|always0\~0)
+    (INSTANCE sw1\|always0\~0)
     (DELAY
       (ABSOLUTE
         (PORT datab (263:263:263) (345:345:345))
@@ -6250,7 +6250,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[3\])
+    (INSTANCE sw1\|data_reg\[3\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -13417,7 +13417,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[13\])
+    (INSTANCE sw2\|data_reg\[13\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -13444,7 +13444,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[13\])
+    (INSTANCE sw1\|data_reg\[13\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -18000,7 +18000,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[14\])
+    (INSTANCE sw2\|data_reg\[14\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -18027,7 +18027,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[14\])
+    (INSTANCE sw1\|data_reg\[14\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1540:1540:1540) (1557:1557:1557))
@@ -22612,7 +22612,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[15\])
+    (INSTANCE sw2\|data_reg\[15\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -22639,7 +22639,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[15\])
+    (INSTANCE sw1\|data_reg\[15\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -27307,7 +27307,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[2\])
+    (INSTANCE sw2\|data_reg\[2\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -27334,7 +27334,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[2\])
+    (INSTANCE sw1\|data_reg\[2\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -36333,7 +36333,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[4\])
+    (INSTANCE sw2\|data_reg\[4\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -36360,7 +36360,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[4\])
+    (INSTANCE sw1\|data_reg\[4\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -40529,7 +40529,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[5\])
+    (INSTANCE sw2\|data_reg\[5\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -40556,7 +40556,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[5\])
+    (INSTANCE sw1\|data_reg\[5\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -44821,7 +44821,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[6\])
+    (INSTANCE sw2\|data_reg\[6\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -44848,7 +44848,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[6\])
+    (INSTANCE sw1\|data_reg\[6\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -49046,7 +49046,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[7\])
+    (INSTANCE sw2\|data_reg\[7\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -49073,7 +49073,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[7\])
+    (INSTANCE sw1\|data_reg\[7\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -53238,7 +53238,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[8\])
+    (INSTANCE sw2\|data_reg\[8\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -53265,7 +53265,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[8\])
+    (INSTANCE sw1\|data_reg\[8\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -57461,7 +57461,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[9\])
+    (INSTANCE sw2\|data_reg\[9\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -57488,7 +57488,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[9\])
+    (INSTANCE sw1\|data_reg\[9\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -61677,7 +61677,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[11\])
+    (INSTANCE sw2\|data_reg\[11\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -61704,7 +61704,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[11\])
+    (INSTANCE sw1\|data_reg\[11\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -66156,7 +66156,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[12\])
+    (INSTANCE sw2\|data_reg\[12\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -66183,7 +66183,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[12\])
+    (INSTANCE sw1\|data_reg\[12\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -70726,7 +70726,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[1\])
+    (INSTANCE sw2\|data_reg\[1\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -70753,7 +70753,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[1\])
+    (INSTANCE sw1\|data_reg\[1\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))
@@ -74956,7 +74956,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE rb_sw1\|data_reg\[10\])
+    (INSTANCE sw2\|data_reg\[10\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1871:1871:1871) (1885:1885:1885))
@@ -74983,7 +74983,7 @@
   )
   (CELL
     (CELLTYPE "dffeas")
-    (INSTANCE lb_sw1\|data_reg\[10\])
+    (INSTANCE sw1\|data_reg\[10\])
     (DELAY
       (ABSOLUTE
         (PORT clk (1524:1524:1524) (1537:1537:1537))

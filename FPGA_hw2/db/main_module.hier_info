@@ -71,7 +71,7 @@ clk => clk1[24].CLK
 clk => clk1[25].CLK
 
 
-|main_module|switchbank:lb_sw1
+|main_module|switchbank:sw1
 clk => data_reg[0].CLK
 clk => data_reg[1].CLK
 clk => data_reg[2].CLK
@@ -159,7 +159,7 @@ data_out[14] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 data_out[15] <= data_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|main_module|switchbank:rb_sw1
+|main_module|switchbank:sw2
 clk => data_reg[0].CLK
 clk => data_reg[1].CLK
 clk => data_reg[2].CLK

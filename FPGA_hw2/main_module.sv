@@ -39,7 +39,7 @@ sevensegment ss1(
   .clk(clk)
 );
 
-switchbank  lb_sw1(
+switchbank  sw1(
 	.clk(clk),
 	.switches(input_arg),
 	.enter_key(left_button),
@@ -48,7 +48,7 @@ switchbank  lb_sw1(
 	.data_out(switch_in_left) // burada devicedan okunan deger veriliyor statusreg ya da datareg olarak dataout guncellenecek
 );
 
-switchbank  rb_sw1(
+switchbank  sw2(
 	.clk(clk),
 	.switches(input_arg),
 	.enter_key(right_button),

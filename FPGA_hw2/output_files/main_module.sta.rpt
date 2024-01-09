@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for main_module
-Sun Jan 07 19:43:29 2024
+Tue Jan 09 00:38:44 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -120,12 +120,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.00        ;
+; Average used               ; 2.67        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ; < 0.1%      ;
+;     Processors 2-6         ;  33.3%      ;
 ;     Processors 7-12        ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -322,112 +322,112 @@ No paths to report.
 +-------+-----------------------------+-----------------------------+---------------------------+---------------------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                            ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                       ; To Node                         ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; 0.029 ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 2.196      ; 2.611      ;
-; 0.346 ; sevensegment:ss1|clk1[0]        ; sevensegment:ss1|clk1[0]        ; clk                       ; clk         ; 0.000        ; 0.077      ; 0.580      ;
-; 0.354 ; bird:br1|ir[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.403      ; 0.914      ;
-; 0.357 ; bird:br1|state[2]               ; bird:br1|state[2]               ; clk                       ; clk         ; 0.000        ; 0.063      ; 0.577      ;
-; 0.358 ; switchbank:rb_sw1|status_reg[0] ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; switchbank:lb_sw1|status_reg[0] ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
-; 0.358 ; bird:br1|zeroflag               ; bird:br1|zeroflag               ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
-; 0.376 ; bird:br1|pc[11]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.609      ;
-; 0.380 ; switchbank:rb_sw1|pressed[1]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.599      ;
-; 0.392 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.611      ;
-; 0.504 ; bird:br1|pc[1]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.064      ;
-; 0.518 ; bird:br1|pc[4]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.078      ;
-; 0.520 ; bird:br1|pc[4]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.080      ;
-; 0.520 ; bird:br1|pc[0]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.080      ;
-; 0.549 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.768      ;
-; 0.549 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.768      ;
-; 0.550 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
-; 0.550 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
-; 0.550 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
-; 0.551 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.770      ;
-; 0.552 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.771      ;
-; 0.553 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.772      ;
-; 0.553 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.772      ;
-; 0.554 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.773      ;
-; 0.554 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.773      ;
-; 0.555 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.774      ;
-; 0.555 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.774      ;
-; 0.555 ; bird:br1|pc[2]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.788      ;
-; 0.556 ; bird:br1|pc[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.789      ;
-; 0.558 ; bird:br1|pc[8]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.791      ;
-; 0.560 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[1]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.779      ;
-; 0.561 ; bird:br1|pc[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.794      ;
-; 0.561 ; bird:br1|pc[9]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.794      ;
-; 0.570 ; bird:br1|pc[4]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.789      ;
-; 0.573 ; bird:br1|pc[1]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.792      ;
-; 0.574 ; bird:br1|pc[3]                  ; bird:br1|pc[3]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.793      ;
-; 0.574 ; switchbank:lb_sw1|pressed[1]    ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.793      ;
-; 0.578 ; bird:br1|pc[6]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.811      ;
-; 0.581 ; bird:br1|pc[0]                  ; bird:br1|pc[0]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.800      ;
-; 0.595 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.814      ;
-; 0.615 ; bird:br1|pc[3]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.175      ;
-; 0.617 ; bird:br1|pc[3]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.177      ;
-; 0.630 ; bird:br1|pc[4]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.190      ;
-; 0.632 ; bird:br1|pc[4]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.192      ;
-; 0.643 ; bird:br1|ir[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.203      ;
-; 0.660 ; bird:br1|ir[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.400      ; 1.217      ;
-; 0.678 ; bird:br1|ir[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.393      ; 1.228      ;
-; 0.693 ; bird:br1|pc[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.926      ;
-; 0.698 ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15] ; clk         ; -0.500       ; 2.196      ; 2.780      ;
-; 0.709 ; input_arg[11]                   ; switchbank:rb_sw1|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.910      ;
-; 0.711 ; input_arg[1]                    ; switchbank:rb_sw1|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.912      ;
-; 0.717 ; input_arg[5]                    ; switchbank:rb_sw1|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.918      ;
-; 0.726 ; bird:br1|pc[1]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.286      ;
-; 0.727 ; bird:br1|pc[3]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.287      ;
-; 0.728 ; bird:br1|pc[1]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.288      ;
-; 0.729 ; bird:br1|pc[3]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.289      ;
-; 0.742 ; bird:br1|pc[4]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.302      ;
-; 0.742 ; bird:br1|pc[0]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.302      ;
-; 0.744 ; bird:br1|pc[4]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.304      ;
-; 0.744 ; bird:br1|pc[0]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.304      ;
-; 0.815 ; bird:br1|state[2]               ; bird:br1|regbank[7][1]          ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.025      ;
-; 0.818 ; bird:br1|state[2]               ; bird:br1|regbank[7][4]          ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.028      ;
-; 0.818 ; bird:br1|state[2]               ; bird:br1|regbank[7][9]          ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.028      ;
-; 0.824 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
-; 0.824 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
-; 0.824 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
-; 0.825 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.044      ;
-; 0.825 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.044      ;
-; 0.825 ; bird:br1|state[2]               ; bird:br1|regbank[7][5]          ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.035      ;
-; 0.826 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.045      ;
-; 0.827 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.046      ;
-; 0.833 ; bird:br1|pc[7]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.066      ;
-; 0.833 ; bird:br1|pc[9]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.066      ;
-; 0.838 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.057      ;
-; 0.838 ; bird:br1|pc[1]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.398      ;
-; 0.839 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.058      ;
-; 0.839 ; bird:br1|pc[3]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.399      ;
-; 0.840 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.059      ;
-; 0.840 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.059      ;
-; 0.840 ; bird:br1|pc[1]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.400      ;
-; 0.841 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
-; 0.841 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
-; 0.841 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
-; 0.841 ; bird:br1|pc[3]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.401      ;
-; 0.842 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
-; 0.842 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
-; 0.842 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
-; 0.843 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.062      ;
-; 0.843 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.062      ;
-; 0.844 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.063      ;
-; 0.844 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.063      ;
-; 0.845 ; bird:br1|pc[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.078      ;
-; 0.846 ; bird:br1|pc[3]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.065      ;
-; 0.847 ; bird:br1|pc[8]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.080      ;
-; 0.849 ; bird:br1|pc[8]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.082      ;
-; 0.854 ; bird:br1|pc[4]                  ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.414      ;
-; 0.854 ; bird:br1|pc[0]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.414      ;
-; 0.856 ; bird:br1|pc[0]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.416      ;
-; 0.859 ; bird:br1|pc[0]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.078      ;
-; 0.867 ; bird:br1|pc[6]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.100      ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                      ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; 0.029 ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 2.196      ; 2.611      ;
+; 0.346 ; sevensegment:ss1|clk1[0]     ; sevensegment:ss1|clk1[0]     ; clk                       ; clk         ; 0.000        ; 0.077      ; 0.580      ;
+; 0.354 ; bird:br1|ir[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.403      ; 0.914      ;
+; 0.357 ; bird:br1|state[2]            ; bird:br1|state[2]            ; clk                       ; clk         ; 0.000        ; 0.063      ; 0.577      ;
+; 0.358 ; switchbank:sw2|status_reg[0] ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; switchbank:sw1|status_reg[0] ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.358 ; bird:br1|zeroflag            ; bird:br1|zeroflag            ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.577      ;
+; 0.376 ; bird:br1|pc[11]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.609      ;
+; 0.380 ; switchbank:sw2|pressed[1]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.599      ;
+; 0.392 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.611      ;
+; 0.504 ; bird:br1|pc[1]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.064      ;
+; 0.518 ; bird:br1|pc[4]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.078      ;
+; 0.520 ; bird:br1|pc[4]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.080      ;
+; 0.520 ; bird:br1|pc[0]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.080      ;
+; 0.549 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.549 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.768      ;
+; 0.550 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.550 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.550 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.769      ;
+; 0.551 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.770      ;
+; 0.552 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.771      ;
+; 0.553 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.772      ;
+; 0.553 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.772      ;
+; 0.554 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.773      ;
+; 0.554 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.773      ;
+; 0.555 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.774      ;
+; 0.555 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.774      ;
+; 0.555 ; bird:br1|pc[2]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.788      ;
+; 0.556 ; bird:br1|pc[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.789      ;
+; 0.558 ; bird:br1|pc[8]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.791      ;
+; 0.560 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[1]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.779      ;
+; 0.561 ; bird:br1|pc[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.794      ;
+; 0.561 ; bird:br1|pc[9]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.794      ;
+; 0.570 ; bird:br1|pc[4]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.789      ;
+; 0.573 ; bird:br1|pc[1]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.792      ;
+; 0.574 ; bird:br1|pc[3]               ; bird:br1|pc[3]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.574 ; switchbank:sw1|pressed[1]    ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.793      ;
+; 0.578 ; bird:br1|pc[6]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.811      ;
+; 0.581 ; bird:br1|pc[0]               ; bird:br1|pc[0]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.800      ;
+; 0.595 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.062      ; 0.814      ;
+; 0.615 ; bird:br1|pc[3]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.175      ;
+; 0.617 ; bird:br1|pc[3]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.177      ;
+; 0.630 ; bird:br1|pc[4]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.190      ;
+; 0.632 ; bird:br1|pc[4]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.192      ;
+; 0.643 ; bird:br1|ir[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.203      ;
+; 0.660 ; bird:br1|ir[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.400      ; 1.217      ;
+; 0.678 ; bird:br1|ir[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.393      ; 1.228      ;
+; 0.693 ; bird:br1|pc[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 0.926      ;
+; 0.698 ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15] ; clk         ; -0.500       ; 2.196      ; 2.780      ;
+; 0.709 ; input_arg[11]                ; switchbank:sw2|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.910      ;
+; 0.711 ; input_arg[1]                 ; switchbank:sw2|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.912      ;
+; 0.717 ; input_arg[5]                 ; switchbank:sw2|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.918      ;
+; 0.726 ; bird:br1|pc[1]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.286      ;
+; 0.727 ; bird:br1|pc[3]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.287      ;
+; 0.728 ; bird:br1|pc[1]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.288      ;
+; 0.729 ; bird:br1|pc[3]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.289      ;
+; 0.742 ; bird:br1|pc[4]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.302      ;
+; 0.742 ; bird:br1|pc[0]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.302      ;
+; 0.744 ; bird:br1|pc[4]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.304      ;
+; 0.744 ; bird:br1|pc[0]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.304      ;
+; 0.815 ; bird:br1|state[2]            ; bird:br1|regbank[7][1]       ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.025      ;
+; 0.818 ; bird:br1|state[2]            ; bird:br1|regbank[7][4]       ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.028      ;
+; 0.818 ; bird:br1|state[2]            ; bird:br1|regbank[7][9]       ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.028      ;
+; 0.824 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.824 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.824 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.043      ;
+; 0.825 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.044      ;
+; 0.825 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.044      ;
+; 0.825 ; bird:br1|state[2]            ; bird:br1|regbank[7][5]       ; clk                       ; clk         ; 0.000        ; 0.053      ; 1.035      ;
+; 0.826 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.045      ;
+; 0.827 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.046      ;
+; 0.833 ; bird:br1|pc[7]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.066      ;
+; 0.833 ; bird:br1|pc[9]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.066      ;
+; 0.838 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.057      ;
+; 0.838 ; bird:br1|pc[1]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.398      ;
+; 0.839 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.058      ;
+; 0.839 ; bird:br1|pc[3]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.399      ;
+; 0.840 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.840 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.059      ;
+; 0.840 ; bird:br1|pc[1]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.400      ;
+; 0.841 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
+; 0.841 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
+; 0.841 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.060      ;
+; 0.841 ; bird:br1|pc[3]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.401      ;
+; 0.842 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.842 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.842 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.061      ;
+; 0.843 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.062      ;
+; 0.843 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.062      ;
+; 0.844 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.063      ;
+; 0.844 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.063      ;
+; 0.845 ; bird:br1|pc[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.078      ;
+; 0.846 ; bird:br1|pc[3]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.065      ;
+; 0.847 ; bird:br1|pc[8]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.080      ;
+; 0.849 ; bird:br1|pc[8]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.082      ;
+; 0.854 ; bird:br1|pc[4]               ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.414      ;
+; 0.854 ; bird:br1|pc[0]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.414      ;
+; 0.856 ; bird:br1|pc[0]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.403      ; 1.416      ;
+; 0.859 ; bird:br1|pc[0]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.062      ; 1.078      ;
+; 0.867 ; bird:br1|pc[6]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.076      ; 1.100      ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -857,112 +857,112 @@ No paths to report.
 +-------+-----------------------------+-----------------------------+---------------------------+---------------------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                             ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                       ; To Node                         ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; 0.047 ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 1.987      ; 2.388      ;
-; 0.306 ; sevensegment:ss1|clk1[0]        ; sevensegment:ss1|clk1[0]        ; clk                       ; clk         ; 0.000        ; 0.069      ; 0.519      ;
-; 0.311 ; bird:br1|state[2]               ; bird:br1|state[2]               ; clk                       ; clk         ; 0.000        ; 0.056      ; 0.511      ;
-; 0.311 ; bird:br1|zeroflag               ; bird:br1|zeroflag               ; clk                       ; clk         ; 0.000        ; 0.056      ; 0.511      ;
-; 0.312 ; switchbank:rb_sw1|status_reg[0] ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.511      ;
-; 0.312 ; switchbank:lb_sw1|status_reg[0] ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.511      ;
-; 0.327 ; bird:br1|ir[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.830      ;
-; 0.335 ; bird:br1|pc[11]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.546      ;
-; 0.345 ; switchbank:rb_sw1|pressed[1]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.544      ;
-; 0.353 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.552      ;
-; 0.454 ; bird:br1|pc[1]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.957      ;
-; 0.458 ; bird:br1|pc[4]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.961      ;
-; 0.465 ; bird:br1|pc[4]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.968      ;
-; 0.466 ; bird:br1|pc[0]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.969      ;
-; 0.493 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.692      ;
-; 0.493 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.692      ;
-; 0.494 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.693      ;
-; 0.494 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.693      ;
-; 0.495 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.694      ;
-; 0.495 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.694      ;
-; 0.497 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
-; 0.497 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
-; 0.497 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
-; 0.499 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
-; 0.499 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
-; 0.499 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
-; 0.499 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
-; 0.499 ; bird:br1|pc[2]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.710      ;
-; 0.500 ; bird:br1|pc[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.711      ;
-; 0.503 ; bird:br1|pc[8]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.714      ;
-; 0.505 ; bird:br1|pc[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.716      ;
-; 0.505 ; bird:br1|pc[9]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.716      ;
-; 0.506 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[1]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.705      ;
-; 0.512 ; bird:br1|pc[4]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.711      ;
-; 0.515 ; bird:br1|pc[1]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.714      ;
-; 0.516 ; bird:br1|pc[3]                  ; bird:br1|pc[3]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.715      ;
-; 0.519 ; switchbank:lb_sw1|pressed[1]    ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.718      ;
-; 0.520 ; bird:br1|pc[6]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.731      ;
-; 0.524 ; bird:br1|pc[0]                  ; bird:br1|pc[0]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.723      ;
-; 0.530 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.729      ;
-; 0.544 ; bird:br1|pc[3]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.047      ;
-; 0.551 ; bird:br1|pc[3]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.054      ;
-; 0.554 ; bird:br1|pc[4]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.057      ;
-; 0.561 ; bird:br1|pc[4]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.064      ;
-; 0.578 ; bird:br1|ir[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.081      ;
-; 0.606 ; bird:br1|ir[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.356      ; 1.106      ;
-; 0.622 ; bird:br1|ir[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.352      ; 1.118      ;
-; 0.635 ; bird:br1|pc[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.846      ;
-; 0.639 ; bird:br1|pc[1]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.142      ;
-; 0.640 ; bird:br1|pc[3]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.143      ;
-; 0.646 ; bird:br1|pc[1]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.149      ;
-; 0.647 ; bird:br1|pc[3]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.150      ;
-; 0.650 ; bird:br1|pc[4]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.153      ;
-; 0.651 ; input_arg[11]                   ; switchbank:rb_sw1|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.833      ;
-; 0.651 ; bird:br1|pc[0]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.154      ;
-; 0.653 ; input_arg[1]                    ; switchbank:rb_sw1|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.835      ;
-; 0.657 ; bird:br1|pc[4]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.160      ;
-; 0.658 ; input_arg[5]                    ; switchbank:rb_sw1|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.840      ;
-; 0.658 ; bird:br1|pc[0]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.161      ;
-; 0.677 ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15] ; clk         ; -0.500       ; 1.987      ; 2.518      ;
-; 0.735 ; bird:br1|state[2]               ; bird:br1|regbank[7][1]          ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.923      ;
-; 0.735 ; bird:br1|pc[1]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.238      ;
-; 0.736 ; bird:br1|pc[3]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.239      ;
-; 0.737 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.936      ;
-; 0.737 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.936      ;
-; 0.737 ; bird:br1|state[2]               ; bird:br1|regbank[7][9]          ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.925      ;
-; 0.738 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.937      ;
-; 0.738 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.937      ;
-; 0.738 ; bird:br1|state[2]               ; bird:br1|regbank[7][4]          ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.926      ;
-; 0.740 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.939      ;
-; 0.740 ; bird:br1|state[2]               ; bird:br1|regbank[7][5]          ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.928      ;
-; 0.742 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.941      ;
-; 0.742 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.941      ;
-; 0.742 ; bird:br1|pc[1]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.245      ;
-; 0.743 ; bird:br1|pc[3]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.246      ;
-; 0.744 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.943      ;
-; 0.745 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.944      ;
-; 0.746 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.945      ;
-; 0.746 ; bird:br1|pc[4]                  ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.249      ;
-; 0.747 ; bird:br1|pc[0]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.250      ;
-; 0.748 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
-; 0.748 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
-; 0.748 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
-; 0.748 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
-; 0.748 ; bird:br1|pc[7]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.959      ;
-; 0.748 ; bird:br1|pc[9]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.959      ;
-; 0.750 ; bird:br1|pc[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.961      ;
-; 0.751 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.950      ;
-; 0.752 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.951      ;
-; 0.753 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.952      ;
-; 0.754 ; bird:br1|pc[8]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.965      ;
-; 0.754 ; bird:br1|pc[0]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.257      ;
-; 0.755 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
-; 0.755 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
-; 0.755 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
-; 0.755 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
-; 0.759 ; bird:br1|pc[3]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.958      ;
-; 0.761 ; bird:br1|pc[8]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.972      ;
-; 0.763 ; bird:br1|pc[0]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.962      ;
-; 0.771 ; bird:br1|pc[6]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.982      ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                       ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; 0.047 ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 1.987      ; 2.388      ;
+; 0.306 ; sevensegment:ss1|clk1[0]     ; sevensegment:ss1|clk1[0]     ; clk                       ; clk         ; 0.000        ; 0.069      ; 0.519      ;
+; 0.311 ; bird:br1|state[2]            ; bird:br1|state[2]            ; clk                       ; clk         ; 0.000        ; 0.056      ; 0.511      ;
+; 0.311 ; bird:br1|zeroflag            ; bird:br1|zeroflag            ; clk                       ; clk         ; 0.000        ; 0.056      ; 0.511      ;
+; 0.312 ; switchbank:sw2|status_reg[0] ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.312 ; switchbank:sw1|status_reg[0] ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.511      ;
+; 0.327 ; bird:br1|ir[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.830      ;
+; 0.335 ; bird:br1|pc[11]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.546      ;
+; 0.345 ; switchbank:sw2|pressed[1]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.544      ;
+; 0.353 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.552      ;
+; 0.454 ; bird:br1|pc[1]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.957      ;
+; 0.458 ; bird:br1|pc[4]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.961      ;
+; 0.465 ; bird:br1|pc[4]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.968      ;
+; 0.466 ; bird:br1|pc[0]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 0.969      ;
+; 0.493 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.692      ;
+; 0.493 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.692      ;
+; 0.494 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.693      ;
+; 0.494 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.693      ;
+; 0.495 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.694      ;
+; 0.495 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.694      ;
+; 0.497 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
+; 0.497 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
+; 0.497 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.696      ;
+; 0.499 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
+; 0.499 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
+; 0.499 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
+; 0.499 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.698      ;
+; 0.499 ; bird:br1|pc[2]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.710      ;
+; 0.500 ; bird:br1|pc[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.711      ;
+; 0.503 ; bird:br1|pc[8]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.714      ;
+; 0.505 ; bird:br1|pc[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.716      ;
+; 0.505 ; bird:br1|pc[9]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.716      ;
+; 0.506 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[1]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.705      ;
+; 0.512 ; bird:br1|pc[4]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.711      ;
+; 0.515 ; bird:br1|pc[1]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.714      ;
+; 0.516 ; bird:br1|pc[3]               ; bird:br1|pc[3]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.715      ;
+; 0.519 ; switchbank:sw1|pressed[1]    ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.718      ;
+; 0.520 ; bird:br1|pc[6]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.731      ;
+; 0.524 ; bird:br1|pc[0]               ; bird:br1|pc[0]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.723      ;
+; 0.530 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.729      ;
+; 0.544 ; bird:br1|pc[3]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.047      ;
+; 0.551 ; bird:br1|pc[3]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.054      ;
+; 0.554 ; bird:br1|pc[4]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.057      ;
+; 0.561 ; bird:br1|pc[4]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.064      ;
+; 0.578 ; bird:br1|ir[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.081      ;
+; 0.606 ; bird:br1|ir[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.356      ; 1.106      ;
+; 0.622 ; bird:br1|ir[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.352      ; 1.118      ;
+; 0.635 ; bird:br1|pc[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.846      ;
+; 0.639 ; bird:br1|pc[1]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.142      ;
+; 0.640 ; bird:br1|pc[3]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.143      ;
+; 0.646 ; bird:br1|pc[1]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.149      ;
+; 0.647 ; bird:br1|pc[3]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.150      ;
+; 0.650 ; bird:br1|pc[4]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.153      ;
+; 0.651 ; input_arg[11]                ; switchbank:sw2|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.833      ;
+; 0.651 ; bird:br1|pc[0]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.154      ;
+; 0.653 ; input_arg[1]                 ; switchbank:sw2|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.835      ;
+; 0.657 ; bird:br1|pc[4]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.160      ;
+; 0.658 ; input_arg[5]                 ; switchbank:sw2|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.038      ; 0.840      ;
+; 0.658 ; bird:br1|pc[0]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.161      ;
+; 0.677 ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15] ; clk         ; -0.500       ; 1.987      ; 2.518      ;
+; 0.735 ; bird:br1|state[2]            ; bird:br1|regbank[7][1]       ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.923      ;
+; 0.735 ; bird:br1|pc[1]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.238      ;
+; 0.736 ; bird:br1|pc[3]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.239      ;
+; 0.737 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.936      ;
+; 0.737 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.936      ;
+; 0.737 ; bird:br1|state[2]            ; bird:br1|regbank[7][9]       ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.925      ;
+; 0.738 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.937      ;
+; 0.738 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.937      ;
+; 0.738 ; bird:br1|state[2]            ; bird:br1|regbank[7][4]       ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.926      ;
+; 0.740 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.939      ;
+; 0.740 ; bird:br1|state[2]            ; bird:br1|regbank[7][5]       ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.928      ;
+; 0.742 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.941      ;
+; 0.742 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.941      ;
+; 0.742 ; bird:br1|pc[1]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.245      ;
+; 0.743 ; bird:br1|pc[3]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.246      ;
+; 0.744 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.943      ;
+; 0.745 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.944      ;
+; 0.746 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.945      ;
+; 0.746 ; bird:br1|pc[4]               ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.249      ;
+; 0.747 ; bird:br1|pc[0]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.250      ;
+; 0.748 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
+; 0.748 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
+; 0.748 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
+; 0.748 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.947      ;
+; 0.748 ; bird:br1|pc[7]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.959      ;
+; 0.748 ; bird:br1|pc[9]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.959      ;
+; 0.750 ; bird:br1|pc[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.961      ;
+; 0.751 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.950      ;
+; 0.752 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.951      ;
+; 0.753 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.952      ;
+; 0.754 ; bird:br1|pc[8]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.965      ;
+; 0.754 ; bird:br1|pc[0]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.359      ; 1.257      ;
+; 0.755 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.755 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.755 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.755 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.954      ;
+; 0.759 ; bird:br1|pc[3]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.958      ;
+; 0.761 ; bird:br1|pc[8]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.972      ;
+; 0.763 ; bird:br1|pc[0]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.055      ; 0.962      ;
+; 0.771 ; bird:br1|pc[6]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.067      ; 0.982      ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1381,112 +1381,112 @@ No paths to report.
 +-------+-----------------------------+-----------------------------+---------------------------+---------------------------+--------------+------------+------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                             ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; Slack ; From Node                       ; To Node                         ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
-; 0.076 ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15]       ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 1.244      ; 1.539      ;
-; 0.182 ; bird:br1|ir[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.488      ;
-; 0.185 ; sevensegment:ss1|clk1[0]        ; sevensegment:ss1|clk1[0]        ; clk                       ; clk         ; 0.000        ; 0.045      ; 0.314      ;
-; 0.186 ; bird:br1|state[2]               ; bird:br1|state[2]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
-; 0.186 ; switchbank:rb_sw1|status_reg[0] ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
-; 0.186 ; switchbank:lb_sw1|status_reg[0] ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
-; 0.187 ; bird:br1|zeroflag               ; bird:br1|zeroflag               ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.307      ;
-; 0.197 ; bird:br1|pc[11]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.325      ;
-; 0.197 ; switchbank:rb_sw1|pressed[1]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.318      ;
-; 0.205 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.326      ;
-; 0.269 ; bird:br1|pc[1]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.575      ;
-; 0.278 ; bird:br1|pc[4]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.584      ;
-; 0.281 ; bird:br1|pc[4]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.587      ;
-; 0.281 ; bird:br1|pc[0]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.587      ;
-; 0.293 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.413      ;
-; 0.294 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
-; 0.294 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
-; 0.294 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
-; 0.294 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
-; 0.295 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
-; 0.295 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
-; 0.295 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
-; 0.295 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
-; 0.296 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
-; 0.296 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
-; 0.296 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
-; 0.296 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
-; 0.297 ; bird:br1|pc[10]                 ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.425      ;
-; 0.297 ; bird:br1|pc[2]                  ; bird:br1|pc[2]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.425      ;
-; 0.299 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[1]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.419      ;
-; 0.299 ; bird:br1|pc[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.427      ;
-; 0.299 ; bird:br1|pc[8]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.427      ;
-; 0.300 ; bird:br1|pc[9]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.428      ;
-; 0.304 ; bird:br1|pc[4]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.425      ;
-; 0.306 ; bird:br1|pc[1]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.427      ;
-; 0.306 ; bird:br1|pc[3]                  ; bird:br1|pc[3]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.427      ;
-; 0.307 ; switchbank:lb_sw1|pressed[1]    ; switchbank:lb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.428      ;
-; 0.310 ; bird:br1|pc[0]                  ; bird:br1|pc[0]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.431      ;
-; 0.310 ; bird:br1|pc[6]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.438      ;
-; 0.317 ; switchbank:rb_sw1|pressed[0]    ; switchbank:rb_sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.438      ;
-; 0.332 ; bird:br1|pc[3]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.638      ;
-; 0.335 ; bird:br1|pc[3]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.641      ;
-; 0.341 ; bird:br1|ir[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.647      ;
-; 0.344 ; bird:br1|pc[4]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.650      ;
-; 0.347 ; bird:br1|pc[4]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.653      ;
-; 0.359 ; bird:br1|ir[7]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.218      ; 0.661      ;
-; 0.362 ; input_arg[11]                   ; switchbank:rb_sw1|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.473      ;
-; 0.363 ; bird:br1|ir[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.219      ; 0.666      ;
-; 0.364 ; input_arg[1]                    ; switchbank:rb_sw1|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.475      ;
-; 0.367 ; bird:br1|pc[5]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.495      ;
-; 0.368 ; input_arg[5]                    ; switchbank:rb_sw1|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.479      ;
-; 0.398 ; bird:br1|pc[1]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.704      ;
-; 0.398 ; bird:br1|pc[3]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.704      ;
-; 0.401 ; bird:br1|pc[1]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.707      ;
-; 0.401 ; bird:br1|pc[3]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.707      ;
-; 0.410 ; bird:br1|pc[4]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.716      ;
-; 0.410 ; bird:br1|pc[0]                  ; bird:br1|pc[5]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.716      ;
-; 0.413 ; bird:br1|pc[4]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.719      ;
-; 0.413 ; bird:br1|pc[0]                  ; bird:br1|pc[6]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.719      ;
-; 0.437 ; bird:br1|state[2]               ; bird:br1|regbank[7][1]          ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.550      ;
-; 0.439 ; bird:br1|state[2]               ; bird:br1|regbank[7][4]          ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.552      ;
-; 0.439 ; bird:br1|state[2]               ; bird:br1|regbank[7][9]          ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.552      ;
-; 0.441 ; bird:br1|state[2]               ; bird:br1|regbank[7][5]          ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.554      ;
-; 0.442 ; sevensegment:ss1|clk1[4]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.562      ;
-; 0.443 ; sevensegment:ss1|clk1[14]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
-; 0.443 ; sevensegment:ss1|clk1[6]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
-; 0.443 ; sevensegment:ss1|clk1[2]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
-; 0.443 ; sevensegment:ss1|clk1[12]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
-; 0.444 ; sevensegment:ss1|clk1[10]       ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.564      ;
-; 0.444 ; sevensegment:ss1|clk1[8]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.564      ;
-; 0.447 ; bird:br1|pc[7]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.575      ;
-; 0.448 ; bird:br1|pc[9]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.576      ;
-; 0.452 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[2]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.572      ;
-; 0.453 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[4]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.573      ;
-; 0.453 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[8]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.573      ;
-; 0.453 ; input_arg[7]                    ; switchbank:rb_sw1|data_reg[7]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.564      ;
-; 0.454 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[14]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[12]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[6]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[10]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
-; 0.454 ; bird:br1|pc[3]                  ; bird:br1|pc[4]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.575      ;
-; 0.455 ; sevensegment:ss1|clk1[1]        ; sevensegment:ss1|clk1[3]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.575      ;
-; 0.456 ; sevensegment:ss1|clk1[3]        ; sevensegment:ss1|clk1[5]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.576      ;
-; 0.456 ; sevensegment:ss1|clk1[7]        ; sevensegment:ss1|clk1[9]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.576      ;
-; 0.456 ; bird:br1|pc[10]                 ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.584      ;
-; 0.457 ; sevensegment:ss1|clk1[13]       ; sevensegment:ss1|clk1[15]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.457 ; sevensegment:ss1|clk1[5]        ; sevensegment:ss1|clk1[7]        ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.457 ; sevensegment:ss1|clk1[11]       ; sevensegment:ss1|clk1[13]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.457 ; sevensegment:ss1|clk1[9]        ; sevensegment:ss1|clk1[11]       ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
-; 0.458 ; bird:br1|pc[8]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.586      ;
-; 0.461 ; bird:br1|pc[8]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.589      ;
-; 0.463 ; bird:br1|pc[0]                  ; bird:br1|pc[1]                  ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.584      ;
-; 0.464 ; bird:br1|pc[1]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.770      ;
-; 0.464 ; bird:br1|pc[3]                  ; bird:br1|pc[9]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.770      ;
-; 0.467 ; bird:br1|pc[1]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.773      ;
-; 0.467 ; bird:br1|pc[3]                  ; bird:br1|pc[10]                 ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.773      ;
-; 0.469 ; bird:br1|pc[6]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.597      ;
-; 0.472 ; bird:br1|pc[6]                  ; bird:br1|pc[8]                  ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.600      ;
-; 0.476 ; bird:br1|pc[4]                  ; bird:br1|pc[11]                 ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.782      ;
-; 0.476 ; bird:br1|pc[0]                  ; bird:br1|pc[7]                  ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.782      ;
-+-------+---------------------------------+---------------------------------+---------------------------+-------------+--------------+------------+------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                       ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                    ; To Node                      ; Launch Clock              ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
+; 0.076 ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15]    ; sevensegment:ss1|clk1[15] ; clk         ; 0.000        ; 1.244      ; 1.539      ;
+; 0.182 ; bird:br1|ir[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.488      ;
+; 0.185 ; sevensegment:ss1|clk1[0]     ; sevensegment:ss1|clk1[0]     ; clk                       ; clk         ; 0.000        ; 0.045      ; 0.314      ;
+; 0.186 ; bird:br1|state[2]            ; bird:br1|state[2]            ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; switchbank:sw2|status_reg[0] ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; switchbank:sw1|status_reg[0] ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; bird:br1|zeroflag            ; bird:br1|zeroflag            ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.307      ;
+; 0.197 ; bird:br1|pc[11]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.325      ;
+; 0.197 ; switchbank:sw2|pressed[1]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.318      ;
+; 0.205 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|pressed[1]    ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.326      ;
+; 0.269 ; bird:br1|pc[1]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.575      ;
+; 0.278 ; bird:br1|pc[4]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.584      ;
+; 0.281 ; bird:br1|pc[4]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.587      ;
+; 0.281 ; bird:br1|pc[0]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.587      ;
+; 0.293 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.413      ;
+; 0.294 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
+; 0.294 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
+; 0.294 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
+; 0.294 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.414      ;
+; 0.295 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.295 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.295 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.295 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.415      ;
+; 0.296 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.296 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.416      ;
+; 0.297 ; bird:br1|pc[10]              ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.297 ; bird:br1|pc[2]               ; bird:br1|pc[2]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.425      ;
+; 0.299 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[1]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; bird:br1|pc[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.299 ; bird:br1|pc[8]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.427      ;
+; 0.300 ; bird:br1|pc[9]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.428      ;
+; 0.304 ; bird:br1|pc[4]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.425      ;
+; 0.306 ; bird:br1|pc[1]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; bird:br1|pc[3]               ; bird:br1|pc[3]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.427      ;
+; 0.307 ; switchbank:sw1|pressed[1]    ; switchbank:sw1|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.428      ;
+; 0.310 ; bird:br1|pc[0]               ; bird:br1|pc[0]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.431      ;
+; 0.310 ; bird:br1|pc[6]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.438      ;
+; 0.317 ; switchbank:sw2|pressed[0]    ; switchbank:sw2|status_reg[0] ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.438      ;
+; 0.332 ; bird:br1|pc[3]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.638      ;
+; 0.335 ; bird:br1|pc[3]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.641      ;
+; 0.341 ; bird:br1|ir[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.647      ;
+; 0.344 ; bird:br1|pc[4]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.650      ;
+; 0.347 ; bird:br1|pc[4]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.653      ;
+; 0.359 ; bird:br1|ir[7]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.218      ; 0.661      ;
+; 0.362 ; input_arg[11]                ; switchbank:sw2|data_reg[11]  ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.473      ;
+; 0.363 ; bird:br1|ir[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.219      ; 0.666      ;
+; 0.364 ; input_arg[1]                 ; switchbank:sw2|data_reg[1]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.475      ;
+; 0.367 ; bird:br1|pc[5]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.495      ;
+; 0.368 ; input_arg[5]                 ; switchbank:sw2|data_reg[5]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.479      ;
+; 0.398 ; bird:br1|pc[1]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.704      ;
+; 0.398 ; bird:br1|pc[3]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.704      ;
+; 0.401 ; bird:br1|pc[1]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.707      ;
+; 0.401 ; bird:br1|pc[3]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.707      ;
+; 0.410 ; bird:br1|pc[4]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.716      ;
+; 0.410 ; bird:br1|pc[0]               ; bird:br1|pc[5]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.716      ;
+; 0.413 ; bird:br1|pc[4]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.719      ;
+; 0.413 ; bird:br1|pc[0]               ; bird:br1|pc[6]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.719      ;
+; 0.437 ; bird:br1|state[2]            ; bird:br1|regbank[7][1]       ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.550      ;
+; 0.439 ; bird:br1|state[2]            ; bird:br1|regbank[7][4]       ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.552      ;
+; 0.439 ; bird:br1|state[2]            ; bird:br1|regbank[7][9]       ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.552      ;
+; 0.441 ; bird:br1|state[2]            ; bird:br1|regbank[7][5]       ; clk                       ; clk         ; 0.000        ; 0.029      ; 0.554      ;
+; 0.442 ; sevensegment:ss1|clk1[4]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.562      ;
+; 0.443 ; sevensegment:ss1|clk1[14]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
+; 0.443 ; sevensegment:ss1|clk1[6]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
+; 0.443 ; sevensegment:ss1|clk1[2]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
+; 0.443 ; sevensegment:ss1|clk1[12]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.563      ;
+; 0.444 ; sevensegment:ss1|clk1[10]    ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.564      ;
+; 0.444 ; sevensegment:ss1|clk1[8]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.564      ;
+; 0.447 ; bird:br1|pc[7]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.575      ;
+; 0.448 ; bird:br1|pc[9]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.576      ;
+; 0.452 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[2]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.572      ;
+; 0.453 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[4]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[8]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.573      ;
+; 0.453 ; input_arg[7]                 ; switchbank:sw2|data_reg[7]   ; clk                       ; clk         ; 0.000        ; 0.027      ; 0.564      ;
+; 0.454 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[14]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[12]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[6]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[10]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.574      ;
+; 0.454 ; bird:br1|pc[3]               ; bird:br1|pc[4]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.575      ;
+; 0.455 ; sevensegment:ss1|clk1[1]     ; sevensegment:ss1|clk1[3]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.575      ;
+; 0.456 ; sevensegment:ss1|clk1[3]     ; sevensegment:ss1|clk1[5]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; sevensegment:ss1|clk1[7]     ; sevensegment:ss1|clk1[9]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.576      ;
+; 0.456 ; bird:br1|pc[10]              ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.584      ;
+; 0.457 ; sevensegment:ss1|clk1[13]    ; sevensegment:ss1|clk1[15]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; sevensegment:ss1|clk1[5]     ; sevensegment:ss1|clk1[7]     ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; sevensegment:ss1|clk1[11]    ; sevensegment:ss1|clk1[13]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.457 ; sevensegment:ss1|clk1[9]     ; sevensegment:ss1|clk1[11]    ; clk                       ; clk         ; 0.000        ; 0.036      ; 0.577      ;
+; 0.458 ; bird:br1|pc[8]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.586      ;
+; 0.461 ; bird:br1|pc[8]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.589      ;
+; 0.463 ; bird:br1|pc[0]               ; bird:br1|pc[1]               ; clk                       ; clk         ; 0.000        ; 0.037      ; 0.584      ;
+; 0.464 ; bird:br1|pc[1]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.770      ;
+; 0.464 ; bird:br1|pc[3]               ; bird:br1|pc[9]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.770      ;
+; 0.467 ; bird:br1|pc[1]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.773      ;
+; 0.467 ; bird:br1|pc[3]               ; bird:br1|pc[10]              ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.773      ;
+; 0.469 ; bird:br1|pc[6]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.597      ;
+; 0.472 ; bird:br1|pc[6]               ; bird:br1|pc[8]               ; clk                       ; clk         ; 0.000        ; 0.044      ; 0.600      ;
+; 0.476 ; bird:br1|pc[4]               ; bird:br1|pc[11]              ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.782      ;
+; 0.476 ; bird:br1|pc[0]               ; bird:br1|pc[7]               ; clk                       ; clk         ; 0.000        ; 0.222      ; 0.782      ;
++-------+------------------------------+------------------------------+---------------------------+-------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1986,7 +1986,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jan 07 19:43:25 2024
+    Info: Processing started: Tue Jan 09 00:38:41 2024
 Info: Command: quartus_sta hw2 -c main_module
 Info: qsta_default_script.tcl version: #1
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
@@ -2069,8 +2069,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4766 megabytes
-    Info: Processing ended: Sun Jan 07 19:43:29 2024
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Tue Jan 09 00:38:44 2024
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
