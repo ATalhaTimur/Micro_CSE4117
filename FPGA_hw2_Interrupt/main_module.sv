@@ -1,9 +1,7 @@
 module main_module (
                         input clk,
-                        //---input from switchbank
-                                  //input from 16-bit switchboard
 								input left_button,
-								input right_button,             //enter button
+								input right_button,            
               
                         output logic [3:0] grounds,
                         output logic [6:0] display
