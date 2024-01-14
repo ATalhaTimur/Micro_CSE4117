@@ -16,7 +16,7 @@
 // PROGRAM "Quartus II 64-Bit"
 // VERSION "Version 13.1.0 Build 162 10/23/2013 SJ Web Edition"
 
-// DATE "01/14/2024 00:19:29"
+// DATE "01/14/2024 18:48:58"
 
 // 
 // Device: Altera EP4CE22F17C6 Package FBGA256
@@ -63,8 +63,8 @@ input 	ps2c_input;
 // display[4]	=>  Location: PIN_B7,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // display[5]	=>  Location: PIN_B6,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // display[6]	=>  Location: PIN_A5,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ps2d_input	=>  Location: PIN_F8,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// ps2c_input	=>  Location: PIN_E9,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ps2d_input	=>  Location: PIN_B12,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ps2c_input	=>  Location: PIN_D11,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // clk	=>  Location: PIN_R8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
@@ -2163,7 +2163,7 @@ defparam \vga|vsync~1 .lut_mask = 16'hEFFF;
 defparam \vga|vsync~1 .sum_lutc_input = "datac";
 // synopsys translate_on
 
-// Location: IOIBUF_X20_Y34_N15
+// Location: IOIBUF_X43_Y34_N22
 cycloneive_io_ibuf \ps2d_input~input (
 	.i(ps2d_input),
 	.ibar(gnd),
@@ -2173,7 +2173,7 @@ defparam \ps2d_input~input .bus_hold = "false";
 defparam \ps2d_input~input .simulate_z_as = "z";
 // synopsys translate_on
 
-// Location: IOIBUF_X29_Y34_N15
+// Location: IOIBUF_X51_Y34_N15
 cycloneive_io_ibuf \ps2c_input~input (
 	.i(ps2c_input),
 	.ibar(gnd),
