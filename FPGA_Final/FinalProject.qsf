@@ -71,12 +71,14 @@ set_location_assignment PIN_D3 -to grounds[3]
 set_location_assignment PIN_C3 -to grounds[2]
 set_location_assignment PIN_A3 -to grounds[1]
 set_location_assignment PIN_B4 -to grounds[0]
-set_location_assignment PIN_A12 -to hsync_input
-set_location_assignment PIN_C9 -to rgb_input[0]
-set_location_assignment PIN_E11 -to rgb_input[1]
-set_location_assignment PIN_C11 -to rgb_input[2]
-set_location_assignment PIN_D12 -to vsync_input
-set_location_assignment PIN_B12 -to ps2d_input
-set_location_assignment PIN_D11 -to ps2c_input
+set_location_assignment PIN_A12 -to vsync_input
 set_global_assignment -name CDF_FILE output_files/Chain1.cdf
+set_location_assignment PIN_C9 -to rgb[0]
+set_location_assignment PIN_A12 -to hsync
+set_location_assignment PIN_D11 -to ps2c
+set_location_assignment PIN_B12 -to ps2d
+set_location_assignment PIN_J15 -to pushbutton
+set_location_assignment PIN_C11 -to rgb[2]
+set_location_assignment PIN_E11 -to rgb[1]
+set_location_assignment PIN_D12 -to vsync
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

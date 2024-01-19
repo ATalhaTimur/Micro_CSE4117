@@ -1,6 +1,7 @@
 
-State Machine - |main_module|keyboard:kybrd|state
-Name state.IDLE state.END state.READ 
-state.IDLE 0 0 0 
-state.READ 1 0 1 
-state.END 1 1 0 
+State Machine - |main_module|keyboard:kb1|state
+Name state.END state.PARSE state.READ state.IDLE 
+state.IDLE 0 0 0 0 
+state.READ 0 0 1 1 
+state.PARSE 0 1 0 1 
+state.END 1 0 0 1 

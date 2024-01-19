@@ -1,5 +1,5 @@
 EDA Netlist Writer report for FinalProject
-Fri Jan 19 03:31:39 2024
+Sat Jan 20 00:11:19 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Jan 19 03:31:39 2024 ;
+; EDA Netlist Writer Status ; Successful - Sat Jan 20 00:11:19 2024 ;
 ; Revision Name             ; FinalProject                          ;
 ; Top-level Entity Name     ; main_module                           ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jan 19 03:31:35 2024
+    Info: Processing started: Sat Jan 20 00:11:15 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off FinalProject -c FinalProject
 Info (204019): Generated file FinalProject_6_1200mv_85c_slow.svo in folder "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file FinalProject_6_1200mv_0c_slow.svo in folder "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/simulation/modelsim/" for EDA simulation tool
@@ -99,8 +99,8 @@ Info (204019): Generated file FinalProject_6_1200mv_0c_v_slow.sdo in folder "C:/
 Info (204019): Generated file FinalProject_min_1200mv_0c_v_fast.sdo in folder "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file FinalProject_v.sdo in folder "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4593 megabytes
-    Info: Processing ended: Fri Jan 19 03:31:39 2024
+    Info: Peak virtual memory: 4604 megabytes
+    Info: Processing ended: Sat Jan 20 00:11:19 2024
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:02
 

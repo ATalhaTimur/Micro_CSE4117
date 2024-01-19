@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Fri Jan 19 03:31:03 2024
+Sat Jan 20 00:10:26 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -13,15 +13,16 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |main_module|keyboard:kybrd|state
+  8. State Machine - |main_module|keyboard:kb1|state
   9. Registers Removed During Synthesis
  10. General Register Statistics
  11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Port Connectivity Checks: "mammal:m1"
- 14. Port Connectivity Checks: "keyboard:kybrd"
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+ 14. Port Connectivity Checks: "vga_sync:vg1"
+ 15. Port Connectivity Checks: "keyboard:kb1"
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -47,16 +48,16 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Jan 19 03:31:02 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sat Jan 20 00:10:26 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; FinalProject                               ;
 ; Top-level Entity Name              ; main_module                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 4,315                                      ;
-;     Total combinational functions  ; 2,375                                      ;
-;     Dedicated logic registers      ; 2,305                                      ;
-; Total registers                    ; 2305                                       ;
-; Total pins                         ; 19                                         ;
+; Total logic elements               ; 5,359                                      ;
+;     Total combinational functions  ; 3,089                                      ;
+;     Dedicated logic registers      ; 2,755                                      ;
+; Total registers                    ; 2755                                       ;
+; Total pins                         ; 20                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -188,28 +189,28 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,315     ;
+; Estimated Total logic elements              ; 5,359     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2375      ;
+; Total combinational functions               ; 3089      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 1817      ;
-;     -- 3 input functions                    ; 243       ;
-;     -- <=2 input functions                  ; 315       ;
+;     -- 4 input functions                    ; 2093      ;
+;     -- 3 input functions                    ; 486       ;
+;     -- <=2 input functions                  ; 510       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2277      ;
-;     -- arithmetic mode                      ; 98        ;
+;     -- normal mode                          ; 2811      ;
+;     -- arithmetic mode                      ; 278       ;
 ;                                             ;           ;
-; Total registers                             ; 2305      ;
-;     -- Dedicated logic registers            ; 2305      ;
+; Total registers                             ; 2755      ;
+;     -- Dedicated logic registers            ; 2755      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 19        ;
+; I/O pins                                    ; 20        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2299      ;
-; Total fan-out                               ; 15348     ;
-; Average fan-out                             ; 3.25      ;
+; Maximum fan-out                             ; 2749      ;
+; Total fan-out                               ; 18873     ;
+; Average fan-out                             ; 3.21      ;
 +---------------------------------------------+-----------+
 
 
@@ -218,37 +219,52 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |main_module               ; 2375 (1756)       ; 2305 (2064)  ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |main_module                  ; work         ;
-;    |keyboard:kybrd|        ; 21 (21)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|keyboard:kybrd   ; work         ;
-;    |mammal:m1|             ; 487 (487)         ; 170 (170)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:m1        ; work         ;
-;    |sevensegment:sg1|      ; 34 (34)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:sg1 ; work         ;
-;    |vga_sync:vga|          ; 77 (77)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|vga_sync:vga     ; work         ;
+; |main_module               ; 3089 (2330)       ; 2755 (2512)  ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |main_module                  ; work         ;
+;    |keyboard:kb1|          ; 29 (29)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|keyboard:kb1     ; work         ;
+;    |mammal:m1|             ; 499 (499)         ; 170 (170)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:m1        ; work         ;
+;    |sevensegment:ss1|      ; 34 (34)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:ss1 ; work         ;
+;    |vga_sync:vg1|          ; 197 (197)         ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|vga_sync:vg1     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------+
-; State Machine - |main_module|keyboard:kybrd|state ;
-+------------+------------+-----------+-------------+
-; Name       ; state.IDLE ; state.END ; state.READ  ;
-+------------+------------+-----------+-------------+
-; state.IDLE ; 0          ; 0         ; 0           ;
-; state.READ ; 1          ; 0         ; 1           ;
-; state.END  ; 1          ; 1         ; 0           ;
-+------------+------------+-----------+-------------+
++-----------------------------------------------------------------+
+; State Machine - |main_module|keyboard:kb1|state                 ;
++-------------+-----------+-------------+------------+------------+
+; Name        ; state.END ; state.PARSE ; state.READ ; state.IDLE ;
++-------------+-----------+-------------+------------+------------+
+; state.IDLE  ; 0         ; 0           ; 0          ; 0          ;
+; state.READ  ; 0         ; 0           ; 1          ; 1          ;
+; state.PARSE ; 0         ; 1           ; 0          ; 1          ;
+; state.END   ; 1         ; 0           ; 0          ; 1          ;
++-------------+-----------+-------------+------------+------------+
 
 
-+------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                           ;
-+----------------------------------------+-------------------------------------+
-; Register name                          ; Reason for Removal                  ;
-+----------------------------------------+-------------------------------------+
-; mammal:m1|intflag                      ; Lost fanout                         ;
-; sevensegment:sg1|clk1[0]               ; Merged with vga_sync:vga|pixel_tick ;
-; sevensegment:sg1|clk1[16..25]          ; Lost fanout                         ;
-; Total Number of Removed Registers = 12 ;                                     ;
-+----------------------------------------+-------------------------------------+
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; mammal:m1|intflag                      ; Lost fanout                            ;
+; planet_x[1]                            ; Merged with planet_x[0]                ;
+; sevensegment:ss1|clk1[0]               ; Merged with vga_sync:vg1|pixel_tick    ;
+; planet_x[0]                            ; Stuck at GND due to stuck port data_in ;
+; planet_y[0]                            ; Stuck at GND due to stuck port data_in ;
+; spaceship_y[15]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_x[15]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_y[9,14]                      ; Stuck at GND due to stuck port data_in ;
+; spaceship_x[14]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_y[10]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_x[10]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_y[11]                        ; Stuck at GND due to stuck port data_in ;
+; spaceship_x[11]                        ; Stuck at GND due to stuck port data_in ;
+; keyboard:kb1|state~6                   ; Lost fanout                            ;
+; keyboard:kb1|state~7                   ; Lost fanout                            ;
+; clk1[26..31]                           ; Lost fanout                            ;
+; sevensegment:ss1|clk1[16..25]          ; Lost fanout                            ;
+; Total Number of Removed Registers = 32 ;                                        ;
++----------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -256,28 +272,49 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2305  ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 28    ;
+; Total registers                              ; 2755  ;
+; Number of registers using Synchronous Clear  ; 26    ;
+; Number of registers using Synchronous Load   ; 31    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2260  ;
+; Number of registers using Clock Enable       ; 2682  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; sevensegment:sg1|grounds[1]            ; 2       ;
-; sevensegment:sg1|grounds[2]            ; 2       ;
-; sevensegment:sg1|grounds[3]            ; 2       ;
-; ss7_out[4]                             ; 1       ;
-; ss7_out[0]                             ; 1       ;
-; Total number of inverted registers = 5 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; spaceship_y[7]                          ; 3       ;
+; spaceship_y[5]                          ; 3       ;
+; spaceship_y[4]                          ; 4       ;
+; spaceship_y[2]                          ; 4       ;
+; spaceship_x[8]                          ; 3       ;
+; spaceship_x[7]                          ; 4       ;
+; spaceship_x[6]                          ; 4       ;
+; spaceship_x[5]                          ; 4       ;
+; spaceship_x[4]                          ; 5       ;
+; spaceship_x[2]                          ; 4       ;
+; planet_x[5]                             ; 7       ;
+; planet_x[3]                             ; 7       ;
+; planet_y[5]                             ; 7       ;
+; planet_y[3]                             ; 7       ;
+; ss7_out[8]                              ; 1       ;
+; ss7_out[4]                              ; 1       ;
+; ss7_out[12]                             ; 1       ;
+; ss7_out[5]                              ; 1       ;
+; ss7_out[1]                              ; 1       ;
+; ss7_out[13]                             ; 1       ;
+; ss7_out[2]                              ; 1       ;
+; sevensegment:ss1|grounds[1]             ; 2       ;
+; sevensegment:ss1|grounds[2]             ; 2       ;
+; sevensegment:ss1|grounds[3]             ; 2       ;
+; isRight                                 ; 29      ;
+; isUp                                    ; 23      ;
+; Total number of inverted registers = 26 ;         ;
++-----------------------------------------+---------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -285,49 +322,71 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
-; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |main_module|keyboard:kybrd|char[6]   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main_module|keyboard:kybrd|count[0]  ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |main_module|spaceship_x[11]          ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |main_module|spaceship_y[6]           ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |main_module|planet_x[2]              ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; Yes        ; |main_module|planet_y[9]              ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |main_module|keyboard:kb1|char[1]     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main_module|keyboard:kb1|count[0]    ;
 ; 33:1               ; 2 bits    ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |main_module|mammal:m1|state[1]       ;
 ; 33:1               ; 2 bits    ; 44 LEs        ; 28 LEs               ; 16 LEs                 ; Yes        ; |main_module|mammal:m1|state[0]       ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[6][7]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[5][10] ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[4][5]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[3][8]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[2][0]  ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[1][11] ;
-; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[0][6]  ;
-; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|pc[11]         ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][15] ;
-; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][7]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|sevensegment:sg1|Mux2    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |main_module|keyboard:kybrd|state     ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux46          ;
-; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux32          ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main_module|data_in[2]               ;
-; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Mux80          ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[6][4]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[5][0]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[4][3]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[3][12] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[2][12] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[1][12] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[0][8]  ;
+; 14:1               ; 12 bits   ; 108 LEs       ; 24 LEs               ; 84 LEs                 ; Yes        ; |main_module|mammal:m1|pc[6]          ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][12] ;
+; 16:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][4]  ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |main_module|spaceship_x[6]           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |main_module|spaceship_y[7]           ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main_module|planet_x[5]              ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |main_module|planet_y[5]              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|sevensegment:ss1|Mux3    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |main_module|keyboard:kb1|state       ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux39          ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux23          ;
+; 6:1                ; 8 bits    ; 32 LEs        ; 24 LEs               ; 8 LEs                  ; No         ; |main_module|data_in[13]              ;
+; 18:1               ; 11 bits   ; 132 LEs       ; 22 LEs               ; 110 LEs                ; No         ; |main_module|mammal:m1|Selector148    ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Mux81          ;
 ; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
-; 18:1               ; 11 bits   ; 132 LEs       ; 22 LEs               ; 110 LEs                ; No         ; |main_module|mammal:m1|Selector138    ;
+; 6:1                ; 7 bits    ; 28 LEs        ; 21 LEs               ; 7 LEs                  ; No         ; |main_module|data_in[2]               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |main_module|keyboard:kb1|Selector17  ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main_module|mammal:m1|Add5           ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
-; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Selector136    ;
+; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Selector132    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; No         ; |main_module|mammal:m1|Add4           ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; No         ; |main_module|mammal:m1|Add4           ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 0 LEs                ; 36 LEs                 ; No         ; |main_module|mammal:m1|Add4           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mammal:m1"                                                                            ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; INT    ; Input  ; Info     ; Stuck at GND                                                                        ;
-; intack ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mammal:m1"                                                                                                                                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Output ; Warning  ; Output or bidir port (12 bits) is smaller than the port expression (13 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
+; intack  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "vga_sync:vg1"                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; x_spaceship ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y_spaceship ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; x_planet    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; y_planet    ; Input ; Warning  ; Input port expression (16 bits) is wider than the input port (10 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++-------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keyboard:kybrd"                                                                                                           ;
+; Port Connectivity Checks: "keyboard:kb1"                                                                                                             ;
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                   ;
 +------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
@@ -340,7 +399,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:08     ;
 +----------------+--------------+
 
 
@@ -350,7 +409,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Fri Jan 19 03:30:55 2024
+    Info: Processing started: Sat Jan 20 00:10:16 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file mammal.sv
@@ -366,32 +425,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file keyboar
 Info (12021): Found 1 design units, including 1 entities, in source file vga_sync.sv
     Info (12023): Found entity 1: vga_sync
 Info (12127): Elaborating entity "main_module" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main_module.sv(35): object "data_all" assigned a value but never read
-Warning (10850): Verilog HDL warning at main_module.sv(151): number of words (59) in memory file does not match the number of elements in the address range [0:127]
-Warning (10230): Verilog HDL assignment warning at ram.dat(4): truncated value with size 24 to match size of target (16)
-Warning (10230): Verilog HDL assignment warning at ram.dat(12): truncated value with size 24 to match size of target (16)
-Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:sg1"
+Warning (10036): Verilog HDL or VHDL warning at main_module.sv(14): object "data_all" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at main_module.sv(151): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at main_module.sv(164): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at main_module.sv(177): truncated value with size 32 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at main_module.sv(190): truncated value with size 32 to match size of target (16)
+Warning (10850): Verilog HDL warning at main_module.sv(265): number of words (76) in memory file does not match the number of elements in the address range [0:150]
+Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:ss1"
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(15): truncated value with size 32 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at sevensegment.sv(19): truncated value with size 32 to match size of target (26)
-Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:vga"
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(19): object "h_speed_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(19): object "v_speed_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(20): object "h_dir_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(20): object "v_dir_planet" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(46): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(48): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(126): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(127): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(128): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(129): truncated value with size 32 to match size of target (10)
-Warning (10030): Net "spaceship_bitmap.waddr_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.waddr_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "spaceship_bitmap.data_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "spaceship_bitmap.we_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.data_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.we_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
-Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:kybrd"
-Warning (10230): Verilog HDL assignment warning at keyboard.sv(54): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:kb1"
+Warning (10230): Verilog HDL assignment warning at keyboard.sv(57): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:vg1"
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(47): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(50): truncated value with size 32 to match size of target (10)
+Warning (10030): Net "spaceship_bitmap.waddr_a" at vga_sync.sv(15) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.waddr_a" at vga_sync.sv(16) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "spaceship_bitmap.data_a" at vga_sync.sv(15) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "spaceship_bitmap.we_a" at vga_sync.sv(15) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.data_a" at vga_sync.sv(16) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.we_a" at vga_sync.sv(16) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "mammal" for hierarchy "mammal:m1"
 Warning (10230): Verilog HDL assignment warning at mammal.sv(56): truncated value with size 32 to match size of target (12)
 Warning (10230): Verilog HDL assignment warning at mammal.sv(62): truncated value with size 32 to match size of target (12)
@@ -407,23 +460,26 @@ Warning (10230): Verilog HDL assignment warning at mammal.sv(189): truncated val
 Warning (10230): Verilog HDL assignment warning at mammal.sv(264): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at mammal.sv(265): truncated value with size 32 to match size of target (16)
 Info (276014): Found 3 instances of uninferred RAM logic
-    Info (276004): RAM logic "vga_sync:vga|planet_bitmap" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "vga_sync:vga|spaceship_bitmap" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "vga_sync:vg1|spaceship_bitmap" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "vga_sync:vg1|planet_bitmap" is uninferred due to inappropriate RAM size
     Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic
+Critical Warning (127005): Memory depth (256) in the design file differs from memory depth (151) in the Memory Initialization File "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/db/FinalProject.ram0_main_module_7115dfaa.hdl.mif" -- setting initial value for remaining addresses to 0
 Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/db/FinalProject.ram0_main_module_7115dfaa.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 11 registers lost all their fanouts during netlist optimizations.
+Info (17049): 19 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 4378 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "pushbutton"
+Info (21057): Implemented 5423 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 4359 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 38 warnings
-    Info: Peak virtual memory: 4688 megabytes
-    Info: Processing ended: Fri Jan 19 03:31:03 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:04
+    Info (21061): Implemented 5403 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 35 warnings
+    Info: Peak virtual memory: 4684 megabytes
+    Info: Processing ended: Sat Jan 20 00:10:26 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:07
 
 

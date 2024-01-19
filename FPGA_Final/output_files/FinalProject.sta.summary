@@ -3,74 +3,74 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -10.203
-TNS   : -17413.008
+Slack : -11.205
+TNS   : -22380.130
 
-Type  : Slow 1200mV 85C Model Setup 'sevensegment:sg1|clk1[15]'
-Slack : 0.173
+Type  : Slow 1200mV 85C Model Setup 'sevensegment:ss1|clk1[15]'
+Slack : 0.180
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.002
+Slack : 0.003
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'sevensegment:sg1|clk1[15]'
+Type  : Slow 1200mV 85C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.358
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2302.000
+TNS   : -2752.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sevensegment:sg1|clk1[15]'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000
 TNS   : -6.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -9.067
-TNS   : -15446.826
+Slack : -9.996
+TNS   : -19922.549
 
-Type  : Slow 1200mV 0C Model Setup 'sevensegment:sg1|clk1[15]'
-Slack : 0.254
+Type  : Slow 1200mV 0C Model Setup 'sevensegment:ss1|clk1[15]'
+Slack : 0.262
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.039
+Slack : 0.053
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'sevensegment:sg1|clk1[15]'
+Type  : Slow 1200mV 0C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2302.000
+TNS   : -2752.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sevensegment:sg1|clk1[15]'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000
 TNS   : -6.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -5.588
-TNS   : -9264.340
+Slack : -6.179
+TNS   : -11977.300
 
-Type  : Fast 1200mV 0C Model Setup 'sevensegment:sg1|clk1[15]'
-Slack : 0.536
+Type  : Fast 1200mV 0C Model Setup 'sevensegment:ss1|clk1[15]'
+Slack : 0.542
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.051
-TNS   : -0.051
+Slack : -0.072
+TNS   : -0.072
 
-Type  : Fast 1200mV 0C Model Hold 'sevensegment:sg1|clk1[15]'
+Type  : Fast 1200mV 0C Model Hold 'sevensegment:ss1|clk1[15]'
 Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -2434.957
+TNS   : -2907.143
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sevensegment:sg1|clk1[15]'
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sevensegment:ss1|clk1[15]'
 Slack : -1.000
 TNS   : -6.000
 

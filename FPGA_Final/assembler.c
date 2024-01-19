@@ -9,7 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 //Converts a hexadecimal string to integer.
 int hex2int( char* hex)
 {
@@ -38,7 +37,7 @@ void main()
     char ch;
     int  chch;
 
-    int program[1000];
+    int program[1000] = {0};
     int counter=0;  //holds the address of the machine code instruction
 
 
@@ -93,6 +92,7 @@ void main()
         while(fgets(line,sizeof line,fp)!= NULL)
         {
             token=strtok(line,"\n\t\r ");  //get the instruction mnemonic or label
+
 //========================================   FIRST PASS  ======================================================
             while (token)
             {
@@ -116,21 +116,23 @@ void main()
                     }
                     counter++;                                                     //skip to the next memory location
                 }
+
                 else if (strcmp(token,"ld")==0)      //------------LD INSTRUCTION---------------------
                 {
                     op1 = strtok(NULL,"\n\t\r ");                //get the 1st operand of ld, which is the destination register
                     op2 = strtok(NULL,"\n\t\r ");                //get the 2nd operand of ld, which is the source register
                     ch = (op1[0]-48)| ((op2[0]-48) << 3);        //form bits 11-0 of machine code. 48 is ASCII value of '0'
                     program[counter]=0x2000+((ch)&0x00ff);       //form the instruction and write it to memory
-                    counter++;                              //skip to the next empty location in memory
+                    counter++;                                   //skip to the next empty location in memory
                 }
                 else if (strcmp(token,"st")==0) //-------------ST INSTRUCTION--------------------
                 {
                     op1 = strtok(NULL,"\n\t\r ");                //get the 1st operand of ld, which is the destination register
                     op2 = strtok(NULL,"\n\t\r ");                //get the 2nd operand of ld, which is the source register
                     chch = (op1[0]-48)<<3| ((op2[0]-48) << 6);        //form bits 11-0 of machine code. 48 is ASCII value of '0'
-                    program[counter]=0x3000+((chch)&0x07ff);       //form the instruction and write it to memory
-                    counter++;                                //skip to the next empty location in memory
+                    program[counter]=0x3000+((chch)&0x01ff);       //form the instruction and write it to memory
+                    counter++;                                   //skip to the next empty location in memory
+                    
                 }
                 else if (strcmp(token,"jz")==0) //------------- CONDITIONAL JUMP ------------------
                 {
@@ -153,7 +155,7 @@ void main()
                     jumptable[noofjumps].name=op2;            //point to the label from the jumptable
                     noofjumps++;                    //skip to the next empty location in jumptable
                     program[counter]=0x5000;            //write the incomplete instruction (just opcode) to memory
-                    counter++;                     //skip to the next empty location in memory.
+                    counter++;                    //skip to the next empty location in memory.
                 }
                 else if (strcmp(token,"add")==0) //----------------- ADD -------------------------------
                 {
@@ -161,50 +163,44 @@ void main()
                     op2 = strtok(NULL,"\n\t\r ");
                     op3 = strtok(NULL,"\n\t\r ");
                     chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);
-                    program[counter]=0x7000+((chch)&0x07ff);
-                    counter++;                  
+                    program[counter]=0x7000+((chch)&0x01ff);
+                    counter++;
                 }
                 else if (strcmp(token,"sub")==0)
                 {
-                    //to be added
-                    // alucode: 001
-                    op1 = strtok(NULL, "\n\t\r "); // dst register
-                    op2 = strtok(NULL, "\n\t\r ");
-                    op3 = strtok(NULL, "\n\t\r ");
-                    chch = (op1[0] - 48) | ((op2[0] - 48) << 6) | ((op3[0] - 48) << 3);
-                    program[counter]= 0x7200+((chch)&0x07ff); 
+                    op1 = strtok(NULL,"\n\t\r ");
+                    op2 = strtok(NULL,"\n\t\r ");
+                    op3 = strtok(NULL,"\n\t\r ");
+                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);
+                    program[counter]=0x7200+((chch)&0x01ff);
                     counter++;
                 }
                 else if (strcmp(token,"and")==0)
                 {
-                    //to be added
-                    // alucode: 010
-                    op1 = strtok(NULL, "\n\t\r "); // dst register
-                    op2 = strtok(NULL, "\n\t\r ");
-                    op3 = strtok(NULL, "\n\t\r ");
-                    chch = (op1[0] - 48) | ((op2[0] - 48) << 6) | ((op3[0] - 48) << 3);
-                    program[counter]= 0x7400+((chch)&0x07ff); 
+                    op1 = strtok(NULL,"\n\t\r ");
+                    op2 = strtok(NULL,"\n\t\r ");
+                    op3 = strtok(NULL,"\n\t\r ");
+                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);
+                    program[counter]=0x7400+((chch)&0x01ff);
                     counter++;
                 }
                 else if (strcmp(token,"or")==0)
                 {
-                    //to be added
-                    op1 = strtok(NULL,"\n\t\r ");    
+                    op1 = strtok(NULL,"\n\t\r ");
                     op2 = strtok(NULL,"\n\t\r ");
                     op3 = strtok(NULL,"\n\t\r ");
-                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);  
-                    program[counter]= 0x7600+((chch)&0x07ff); 
-                    counter++; 
+                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);
+                    program[counter]=0x7600+((chch)&0x01ff);
+                    counter++;
                 }
                 else if (strcmp(token,"xor")==0)
                 {
-                    //to be added
-                    op1 = strtok(NULL,"\n\t\r ");    
+                    op1 = strtok(NULL,"\n\t\r ");
                     op2 = strtok(NULL,"\n\t\r ");
                     op3 = strtok(NULL,"\n\t\r ");
-                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);  
-                    program[counter]= 0x7800+((chch)&0x07ff); 
-                    counter++; 
+                    chch = (op1[0]-48)| ((op2[0]-48)<<6)|((op3[0]-48)<<3);
+                    program[counter]=0x7800+((chch)&0x01ff);
+                    counter++;
                 }
                 else if (strcmp(token,"not")==0)
                 {
@@ -216,11 +212,10 @@ void main()
                 }
                 else if (strcmp(token,"mov")==0)
                 {
-                    //to be added
-                    op1 = strtok(NULL, "\n\t\r ");
-                    op2 = strtok(NULL, "\n\t\r ");
-                    chch = (op1[0] - 48) | ((op2[0] - 48) << 3);
-                    program[counter] = 0x7e40+((chch)&0x00ff);
+                    op1 = strtok(NULL,"\n\t\r ");
+                    op2 = strtok(NULL,"\n\t\r ");
+                    ch = (op1[0]-48)| ((op2[0]-48)<<3);
+                    program[counter]=0x7E40+((ch)&0x00ff);
                     counter++;
                 }
                 else if (strcmp(token,"inc")==0)
@@ -232,63 +227,52 @@ void main()
                 }
                 else if (strcmp(token,"dec")==0)
                 {
-                    //to be added
-                    op1 = strtok(NULL, "\n\t\r ");
-                    chch = (op1[0]-48)| ((op1[0]-48)<<3);
-                    program[counter]= 0x7ec0+((chch)&0x00ff); 
+                    op1 = strtok(NULL,"\n\t\r ");
+                    ch = (op1[0]-48)| ((op1[0]-48)<<3);
+                    program[counter]=0x7EC0+((ch)&0x00ff);
                     counter++;
                 }
                 else if (strcmp(token,"push")==0)
                 {
-                    //to be added
                     op1 = strtok(NULL,"\n\t\r ");
-                    chch = ((op1[0]-48)<<6);
-                    program[counter]=0x8000+((chch)&0x0700);
+                    ch = ((op1[0]-48)<<6);
+                    program[counter]=0x8000+((ch)&0x0fff);
                     counter++;
                 }
                 else if (strcmp(token,"pop")==0)
                 {
-                    //to be added
                     op1 = strtok(NULL,"\n\t\r ");
-                    chch = (op1[0]-48);
-                    program[counter]=0x9000+((chch)&0x0007);
+                    ch = op1[0]-48;
+                    program[counter]=0x9000+((ch)&0x000f);
                     counter++;
                 }
                 else if (strcmp(token,"call")==0)  //-------------- CALL -----------------------------
                 {
-                    //to be added
-                    op1 = strtok(NULL, "\n\t\r ");
-                    jumptable[noofjumps].location = counter; 
-                    op2 = (char *)malloc(sizeof(op1));   
-                    strcpy(op2, op1);                        
-                    jumptable[noofjumps].name = op2;         
-                    noofjumps++;                             
-                    program[counter] = 0xa000;               
+                    op1 = strtok(NULL,"\n\t\r ");
+                    if ((op1[0]=='0')&&(op1[1]=='x'))
+                        program[counter]=0xA000|hex2int(op1+2)&0x0fff;
+                    else if ((  (op1[0])=='-') || ((op1[0]>='0')&&(op1[0]<='9')))
+                        program[counter]=0xA000|atoi(op1)&0x0fff;
                     counter++;
                 }
                 else if (strcmp(token,"ret")==0)
                 {
-                    //to be added
-                    //to be added
-                    program[counter] = 0xb000;
+                    program[counter]=0xB000;
+                    counter++;
+                }
+                else if (strcmp(token, "iret") == 0)
+                {
+                    program[counter]=0xE000;
                     counter++;
                 }
                 else if (strcmp(token, "sti") == 0)
                 {
-                    //to be added
-                    program[counter] = 0xc000;
+                    program[counter]=0xC000;
                     counter++;
                 }
                 else if (strcmp(token, "cli") == 0)
                 {
-                    //to be added
-                    program[counter] = 0xd000;
-                    counter++;
-                } 
-                else if (strcmp(token, "iret") == 0) 
-                {
-                    //to be added
-                    program[counter] = 0xe000;
+                    program[counter]=0xD000;
                     counter++;
                 }
                 else //------WHAT IS ENCOUNTERED IS NOT AN INSTRUCTION BUT A LABEL. UPDATE THE LABEL TABLE--------
@@ -402,11 +386,11 @@ void main()
             printf("%d %s\n", lditable[i].location, lditable[i].name);
         printf("\n");
         fclose(fp);
-        // fp = fopen("RAM","w");
-        // //fprintf(fp,"v2.0 raw\n");
-        // for (i=0;i<counter+dataarea;i++)
-        //     fprintf(fp,"%04x\n",program[i]);
-        // fclose(fp);
+        fp = fopen("RAM","w");
+        fprintf(fp,"v2.0 raw\n");
+        for (i=0;i<counter+dataarea;i++)
+            fprintf(fp,"%04x\n",program[i]);
+        fclose(fp);
         fp = fopen("ram.dat","w");
         for (i=0;i<counter+dataarea;i++)
             fprintf(fp, "%04x\n", program[i]);
