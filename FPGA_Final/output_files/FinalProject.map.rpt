@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Sun Jan 14 18:48:43 2024
+Fri Jan 19 03:31:03 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -15,14 +15,13 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |main_module|keyboard:kybrd|state
   9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Port Connectivity Checks: "mammal:m1"
  14. Port Connectivity Checks: "keyboard:kybrd"
  15. Elapsed Time Per Partition
  16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -48,15 +47,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 14 18:48:43 2024      ;
+; Analysis & Synthesis Status        ; Successful - Fri Jan 19 03:31:02 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; FinalProject                               ;
 ; Top-level Entity Name              ; main_module                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 76                                         ;
-;     Total combinational functions  ; 76                                         ;
-;     Dedicated logic registers      ; 21                                         ;
-; Total registers                    ; 21                                         ;
+; Total logic elements               ; 4,315                                      ;
+;     Total combinational functions  ; 2,375                                      ;
+;     Dedicated logic registers      ; 2,305                                      ;
+; Total registers                    ; 2305                                       ;
 ; Total pins                         ; 19                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
@@ -161,24 +160,27 @@ applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
+;     Processors 7-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
-; mammal.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/mammal.sv      ;         ;
-; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/main_module.sv ;         ;
-; keyboard.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/keyboard.sv    ;         ;
-; vga_sync.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/vga_sync.sv    ;         ;
-+----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                 ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
+; mammal.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/mammal.sv       ;         ;
+; main_module.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/main_module.sv  ;         ;
+; sevensegment.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/sevensegment.sv ;         ;
+; keyboard.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/keyboard.sv     ;         ;
+; vga_sync.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/vga_sync.sv     ;         ;
+; ram.dat                          ; yes             ; Auto-Found Unspecified File  ; C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/ram.dat         ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -186,39 +188,42 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 76        ;
+; Estimated Total logic elements              ; 4,315     ;
 ;                                             ;           ;
-; Total combinational functions               ; 76        ;
+; Total combinational functions               ; 2375      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 34        ;
-;     -- 3 input functions                    ; 12        ;
-;     -- <=2 input functions                  ; 30        ;
+;     -- 4 input functions                    ; 1817      ;
+;     -- 3 input functions                    ; 243       ;
+;     -- <=2 input functions                  ; 315       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 52        ;
-;     -- arithmetic mode                      ; 24        ;
+;     -- normal mode                          ; 2277      ;
+;     -- arithmetic mode                      ; 98        ;
 ;                                             ;           ;
-; Total registers                             ; 21        ;
-;     -- Dedicated logic registers            ; 21        ;
+; Total registers                             ; 2305      ;
+;     -- Dedicated logic registers            ; 2305      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 19        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 21        ;
-; Total fan-out                               ; 314       ;
-; Average fan-out                             ; 2.33      ;
+; Maximum fan-out                             ; 2299      ;
+; Total fan-out                               ; 15348     ;
+; Average fan-out                             ; 3.25      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                               ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name       ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
-; |main_module               ; 76 (0)            ; 21 (0)       ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |main_module              ; work         ;
-;    |vga_sync:vga|          ; 76 (76)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|vga_sync:vga ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                   ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
+; |main_module               ; 2375 (1756)       ; 2305 (2064)  ; 0           ; 0            ; 0       ; 0         ; 19   ; 0            ; |main_module                  ; work         ;
+;    |keyboard:kybrd|        ; 21 (21)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|keyboard:kybrd   ; work         ;
+;    |mammal:m1|             ; 487 (487)         ; 170 (170)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:m1        ; work         ;
+;    |sevensegment:sg1|      ; 34 (34)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:sg1 ; work         ;
+;    |vga_sync:vga|          ; 77 (77)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|vga_sync:vga     ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -234,35 +239,16 @@ Encoding Type:  One-Hot
 +------------+------------+-----------+-------------+
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; keyboard:kybrd|c[0,1]                  ; Lost fanout        ;
-; keyboard:kybrd|status                  ; Lost fanout        ;
-; keyboard:kybrd|count[0..3]             ; Lost fanout        ;
-; keyboard:kybrd|filter[0..7]            ; Lost fanout        ;
-; keyboard:kybrd|rx_done_tick            ; Lost fanout        ;
-; keyboard:kybrd|state.READ              ; Lost fanout        ;
-; keyboard:kybrd|state.END               ; Lost fanout        ;
-; keyboard:kybrd|state.IDLE              ; Lost fanout        ;
-; Total Number of Removed Registers = 19 ;                    ;
-+----------------------------------------+--------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                   ;
-+-------------------------+--------------------+--------------------------------------------------------------------------------+
-; Register name           ; Reason for Removal ; Registers Removed due to This Register                                         ;
-+-------------------------+--------------------+--------------------------------------------------------------------------------+
-; keyboard:kybrd|c[0]     ; Lost Fanouts       ; keyboard:kybrd|c[1], keyboard:kybrd|filter[0], keyboard:kybrd|filter[1],       ;
-;                         ;                    ; keyboard:kybrd|filter[2], keyboard:kybrd|filter[3], keyboard:kybrd|filter[4],  ;
-;                         ;                    ; keyboard:kybrd|filter[5], keyboard:kybrd|filter[6], keyboard:kybrd|filter[7]   ;
-; keyboard:kybrd|count[0] ; Lost Fanouts       ; keyboard:kybrd|state.READ, keyboard:kybrd|state.END, keyboard:kybrd|state.IDLE ;
-; keyboard:kybrd|count[1] ; Lost Fanouts       ; keyboard:kybrd|count[2], keyboard:kybrd|count[3]                               ;
-; keyboard:kybrd|status   ; Lost Fanouts       ; keyboard:kybrd|rx_done_tick                                                    ;
-+-------------------------+--------------------+--------------------------------------------------------------------------------+
++------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                           ;
++----------------------------------------+-------------------------------------+
+; Register name                          ; Reason for Removal                  ;
++----------------------------------------+-------------------------------------+
+; mammal:m1|intflag                      ; Lost fanout                         ;
+; sevensegment:sg1|clk1[0]               ; Merged with vga_sync:vga|pixel_tick ;
+; sevensegment:sg1|clk1[16..25]          ; Lost fanout                         ;
+; Total Number of Removed Registers = 12 ;                                     ;
++----------------------------------------+-------------------------------------+
 
 
 +------------------------------------------------------+
@@ -270,42 +256,83 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 21    ;
+; Total registers                              ; 2305  ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Synchronous Load   ; 28    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 20    ;
+; Number of registers using Clock Enable       ; 2260  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
-; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main_module|keyboard:kybrd|count[3] ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |main_module|keyboard:kybrd|state    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; sevensegment:sg1|grounds[1]            ; 2       ;
+; sevensegment:sg1|grounds[2]            ; 2       ;
+; sevensegment:sg1|grounds[3]            ; 2       ;
+; ss7_out[4]                             ; 1       ;
+; ss7_out[0]                             ; 1       ;
+; Total number of inverted registers = 5 ;         ;
++----------------------------------------+---------+
 
 
-+----------------------------------------+
-; Port Connectivity Checks: "mammal:m1"  ;
-+------+-------+----------+--------------+
-; Port ; Type  ; Severity ; Details      ;
-+------+-------+----------+--------------+
-; INT  ; Input ; Info     ; Stuck at GND ;
-+------+-------+----------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 5:1                ; 10 bits   ; 30 LEs        ; 0 LEs                ; 30 LEs                 ; Yes        ; |main_module|keyboard:kybrd|char[6]   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |main_module|keyboard:kybrd|count[0]  ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |main_module|mammal:m1|state[1]       ;
+; 33:1               ; 2 bits    ; 44 LEs        ; 28 LEs               ; 16 LEs                 ; Yes        ; |main_module|mammal:m1|state[0]       ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[6][7]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[5][10] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[4][5]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[3][8]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[2][0]  ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[1][11] ;
+; 32:1               ; 16 bits   ; 336 LEs       ; 16 LEs               ; 320 LEs                ; Yes        ; |main_module|mammal:m1|regbank[0][6]  ;
+; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|pc[11]         ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 8 LEs                ; 32 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][15] ;
+; 15:1               ; 12 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |main_module|mammal:m1|regbank[7][7]  ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|sevensegment:sg1|Mux2    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |main_module|keyboard:kybrd|state     ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux46          ;
+; 8:1                ; 16 bits   ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Mux32          ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |main_module|data_in[2]               ;
+; 12:1               ; 15 bits   ; 120 LEs       ; 60 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Mux80          ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
+; 18:1               ; 11 bits   ; 132 LEs       ; 22 LEs               ; 110 LEs                ; No         ; |main_module|mammal:m1|Selector138    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |main_module|mammal:m1|Add5           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |main_module|mammal:m1|Add5           ;
+; 11:1               ; 12 bits   ; 84 LEs        ; 24 LEs               ; 60 LEs                 ; No         ; |main_module|mammal:m1|Selector136    ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; No         ; |main_module|mammal:m1|Add4           ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; No         ; |main_module|mammal:m1|Add4           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "keyboard:kybrd"                                                                                                                             ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                      ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; ack  ; Input ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mammal:m1"                                                                            ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; INT    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; intack ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "keyboard:kybrd"                                                                                                           ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
+; dout ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (9 bits) it drives; bit(s) "dout[15..9]" have no fanouts ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -313,7 +340,7 @@ Encoding Type:  One-Hot
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:05     ;
 +----------------+--------------+
 
 
@@ -323,7 +350,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jan 14 18:48:42 2024
+    Info: Processing started: Fri Jan 19 03:30:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file mammal.sv
@@ -338,33 +365,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file keyboar
     Info (12023): Found entity 1: keyboard
 Info (12021): Found 1 design units, including 1 entities, in source file vga_sync.sv
     Info (12023): Found entity 1: vga_sync
-Warning (10236): Verilog HDL Implicit Net warning at main_module.sv(53): created implicit net for "ps2d"
 Info (12127): Elaborating entity "main_module" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at main_module.sv(34): object "ss7_out" assigned a value but never read
-Warning (10858): Verilog HDL warning at main_module.sv(36): object switch_in_left used but never assigned
-Warning (10858): Verilog HDL warning at main_module.sv(37): object switch_in_right used but never assigned
-Warning (10036): Verilog HDL or VHDL warning at main_module.sv(38): object "ackx" assigned a value but never read
-Warning (10030): Net "switch_in_left" at main_module.sv(36) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "switch_in_right" at main_module.sv(37) has no driver or initial value, using a default initial value '0'
-Warning (10034): Output port "grounds" at main_module.sv(6) has no driver
-Warning (10034): Output port "display" at main_module.sv(7) has no driver
+Warning (10036): Verilog HDL or VHDL warning at main_module.sv(35): object "data_all" assigned a value but never read
+Warning (10850): Verilog HDL warning at main_module.sv(151): number of words (59) in memory file does not match the number of elements in the address range [0:127]
+Warning (10230): Verilog HDL assignment warning at ram.dat(4): truncated value with size 24 to match size of target (16)
+Warning (10230): Verilog HDL assignment warning at ram.dat(12): truncated value with size 24 to match size of target (16)
+Info (12128): Elaborating entity "sevensegment" for hierarchy "sevensegment:sg1"
+Warning (10230): Verilog HDL assignment warning at sevensegment.sv(15): truncated value with size 32 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at sevensegment.sv(19): truncated value with size 32 to match size of target (26)
 Info (12128): Elaborating entity "vga_sync" for hierarchy "vga_sync:vga"
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(17): object "h_speed_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(17): object "v_speed_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(18): object "h_dir_planet" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(18): object "v_dir_planet" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(44): truncated value with size 32 to match size of target (10)
+Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(19): object "h_speed_planet" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(19): object "v_speed_planet" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(20): object "h_dir_planet" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at vga_sync.sv(20): object "v_dir_planet" assigned a value but never read
 Warning (10230): Verilog HDL assignment warning at vga_sync.sv(46): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(124): truncated value with size 32 to match size of target (10)
-Warning (10230): Verilog HDL assignment warning at vga_sync.sv(125): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(48): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at vga_sync.sv(126): truncated value with size 32 to match size of target (10)
 Warning (10230): Verilog HDL assignment warning at vga_sync.sv(127): truncated value with size 32 to match size of target (10)
-Warning (10030): Net "spaceship_bitmap.waddr_a" at vga_sync.sv(11) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.waddr_a" at vga_sync.sv(12) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "spaceship_bitmap.data_a" at vga_sync.sv(11) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "spaceship_bitmap.we_a" at vga_sync.sv(11) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.data_a" at vga_sync.sv(12) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "planet_bitmap.we_a" at vga_sync.sv(12) has no driver or initial value, using a default initial value '0'
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(128): truncated value with size 32 to match size of target (10)
+Warning (10230): Verilog HDL assignment warning at vga_sync.sv(129): truncated value with size 32 to match size of target (10)
+Warning (10030): Net "spaceship_bitmap.waddr_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.waddr_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "spaceship_bitmap.data_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "spaceship_bitmap.we_a" at vga_sync.sv(13) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.data_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "planet_bitmap.we_a" at vga_sync.sv(14) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "keyboard" for hierarchy "keyboard:kybrd"
 Warning (10230): Verilog HDL assignment warning at keyboard.sv(54): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "mammal" for hierarchy "mammal:m1"
@@ -381,44 +406,24 @@ Warning (10230): Verilog HDL assignment warning at mammal.sv(182): truncated val
 Warning (10230): Verilog HDL assignment warning at mammal.sv(189): truncated value with size 16 to match size of target (12)
 Warning (10230): Verilog HDL assignment warning at mammal.sv(264): truncated value with size 32 to match size of target (16)
 Warning (10230): Verilog HDL assignment warning at mammal.sv(265): truncated value with size 32 to match size of target (16)
-Info (276014): Found 2 instances of uninferred RAM logic
+Info (276014): Found 3 instances of uninferred RAM logic
     Info (276004): RAM logic "vga_sync:vga|planet_bitmap" is uninferred due to inappropriate RAM size
     Info (276004): RAM logic "vga_sync:vga|spaceship_bitmap" is uninferred due to inappropriate RAM size
+    Info (276007): RAM logic "memory" is uninferred due to asynchronous read logic
+Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/db/FinalProject.ram0_main_module_7115dfaa.hdl.mif" contains "don't care" values -- overwriting them with 0s
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "grounds[0]" is stuck at GND
-    Warning (13410): Pin "grounds[1]" is stuck at GND
-    Warning (13410): Pin "grounds[2]" is stuck at GND
-    Warning (13410): Pin "grounds[3]" is stuck at GND
-    Warning (13410): Pin "display[0]" is stuck at GND
-    Warning (13410): Pin "display[1]" is stuck at GND
-    Warning (13410): Pin "display[2]" is stuck at GND
-    Warning (13410): Pin "display[3]" is stuck at GND
-    Warning (13410): Pin "display[4]" is stuck at GND
-    Warning (13410): Pin "display[5]" is stuck at GND
-    Warning (13410): Pin "display[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 19 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/output_files/FinalProject.map.smsg
+Info (17049): 11 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "ps2d_input"
-    Warning (15610): No output dependent on input pin "ps2c_input"
-Info (21057): Implemented 95 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4378 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 76 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4655 megabytes
-    Info: Processing ended: Sun Jan 14 18:48:43 2024
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/output_files/FinalProject.map.smsg.
+    Info (21061): Implemented 4359 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 38 warnings
+    Info: Peak virtual memory: 4688 megabytes
+    Info: Processing ended: Fri Jan 19 03:31:03 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:04
 
 

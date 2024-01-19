@@ -2,7 +2,9 @@ module vga_sync
   (input logic        clk,
    output logic       hsync,
    output logic       vsync,
-   output logic [2:0] rgb);
+   output logic [2:0] rgb,
+	input logic 	[15:0] x,
+	input logic		[15:0] y);
 
    logic pixel_tick, video_on;
    logic [9:0] h_count;
