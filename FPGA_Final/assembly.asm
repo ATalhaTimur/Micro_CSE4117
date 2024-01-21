@@ -42,7 +42,7 @@
         pbm14: 0x07E0
         pbm15: 0x0000
 .code	
-		ldi 0 0x710
+		ldi 0 0x810
 		ldi 1 pbm0
 		ld 1 1
 		st 0 1
@@ -106,7 +106,7 @@
 		ldi 1 pbm15
 		ld 1 1
 		st 0 1
-		ldi 0 0x700
+		ldi 0 0x800
 		ldi 1 ssbm0
 		ld 1 1
 		st 0 1
@@ -173,19 +173,19 @@
 		ldi 7 0x7ff
 		ldi 0 s_x
 		ld 0 0
-		ldi 1 0xd00
+		ldi 1 0xa00
 		st 1 0
 		ldi 0 s_y
 		ld 0 0
-		ldi 1 0xd01
+		ldi 1 0xa01
 		st 1 0
 		ldi 0 p_x
 		ld 0 0
-		ldi 1 0xd02
+		ldi 1 0xa02
 		st 1 0
 		ldi 0 p_y
 		ld 0 0
-		ldi 1 0xd03
+		ldi 1 0xa03
 		st 1 0
 		ldi 0 0x7f2
         ldi 1 try
@@ -259,7 +259,7 @@ p_upy	ldi 1 is_p_up
 		ldi 2 0x0001
 		and 1 1 2
 		jz p_dy
-		ldi 4 0x0d03
+		ldi 4 0x0a03
         ld 4 4
         ldi 1 0x0006
         sub 4 4 1
@@ -268,11 +268,11 @@ p_upy	ldi 1 is_p_up
 		mov 3 4
 		sub 3 3 2
 		jz p_up_r
-        ldi 1 0x0d03
+        ldi 1 0x0a03
         st 1 4
         jmp p_rx
 
-p_dy	ldi 4 0x0d03
+p_dy	ldi 4 0x0a03
         ld 4 4
         ldi 1 0x0006
         add 4 4 1
@@ -281,7 +281,7 @@ p_dy	ldi 4 0x0d03
 		mov 3 4
 		sub 3 3 2
 		jz p_dow_r
-        ldi 1 0x0d03
+        ldi 1 0x0a03
         st 1 4
         jmp p_rx
 
@@ -290,7 +290,7 @@ p_rx	ldi 1 is_p_right
 		ldi 2 0x0001
 		and 1 1 2
 		jz p_lx
-		ldi 4 0x0d02
+		ldi 4 0x0a02
         ld 4 4
         ldi 1 0x0004
         add 4 4 1
@@ -299,11 +299,11 @@ p_rx	ldi 1 is_p_right
 		mov 3 4
 		sub 3 3 2
 		jz p_rig_r
-        ldi 1 0x0d02
+        ldi 1 0x0a02
         st 1 4
 		jmp loop
 
-p_lx	ldi 4 0x0d02
+p_lx	ldi 4 0x0a02
         ld 4 4
         ldi 1 0x0004
         sub 4 4 1
@@ -312,11 +312,11 @@ p_lx	ldi 4 0x0d02
 		mov 3 4
 		sub 3 3 2
 		jz p_lef_r
-        ldi 1 0x0d02
+        ldi 1 0x0a02
         st 1 4
 		jmp loop
 
-sps_uy	ldi 4 0x0d01
+sps_uy	ldi 4 0x0a01
         ld 4 4
         ldi 1 0x0004
         sub 4 4 1
@@ -325,11 +325,11 @@ sps_uy	ldi 4 0x0d01
 		mov 3 4
 		sub 3 3 2
 		jz loop
-        ldi 1 0x0d01
+        ldi 1 0x0a01
         st 1 4
         jmp loop
 
-sps_dy	ldi 4 0x0d01
+sps_dy	ldi 4 0x0a01
         ld 4 4
         ldi 1 0x0004
         add 4 4 1
@@ -338,11 +338,11 @@ sps_dy	ldi 4 0x0d01
 		mov 3 4
 		sub 2 2 3
 		jz loop
-        ldi 1 0x0d01
+        ldi 1 0x0a01
         st 1 4
         jmp loop
 
-sps_lx	ldi 4 0x0d00
+sps_lx	ldi 4 0x0a00
         ld 4 4
         ldi 1 0x0004
         sub 4 4 1
@@ -351,11 +351,11 @@ sps_lx	ldi 4 0x0d00
 		mov 3 4
 		sub 3 3 2
 		jz loop
-        ldi 1 0x0d00
+        ldi 1 0x0a00
         st 1 4
 		jmp loop
 
-sps_rx	ldi 4 0x0d00
+sps_rx	ldi 4 0x0a00
         ld 4 4
         ldi 1 0x0004
         add 4 4 1
@@ -364,6 +364,6 @@ sps_rx	ldi 4 0x0d00
 		mov 3 4
 		sub 3 3 2
 		jz loop
-        ldi 1 0x0d00
+        ldi 1 0x0a00
         st 1 4
 		jmp loop

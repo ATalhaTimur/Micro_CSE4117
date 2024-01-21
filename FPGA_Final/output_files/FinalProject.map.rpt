@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Sun Jan 21 18:30:48 2024
+Sun Jan 21 18:57:43 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -45,13 +45,13 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jan 21 18:30:48 2024      ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 21 18:57:43 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; FinalProject                               ;
 ; Top-level Entity Name              ; main_module                                ;
 ; Family                             ; Cyclone IV E                               ;
-; Total logic elements               ; 16,220                                     ;
-;     Total combinational functions  ; 9,310                                      ;
+; Total logic elements               ; 16,215                                     ;
+;     Total combinational functions  ; 9,281                                      ;
 ;     Dedicated logic registers      ; 9,058                                      ;
 ; Total registers                    ; 9058                                       ;
 ; Total pins                         ; 20                                         ;
@@ -186,16 +186,16 @@ applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 16,220    ;
+; Estimated Total logic elements              ; 16,215    ;
 ;                                             ;           ;
-; Total combinational functions               ; 9310      ;
+; Total combinational functions               ; 9281      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 6780      ;
-;     -- 3 input functions                    ; 356       ;
-;     -- <=2 input functions                  ; 2174      ;
+;     -- 4 input functions                    ; 6776      ;
+;     -- 3 input functions                    ; 354       ;
+;     -- <=2 input functions                  ; 2151      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 9075      ;
+;     -- normal mode                          ; 9046      ;
 ;     -- arithmetic mode                      ; 235       ;
 ;                                             ;           ;
 ; Total registers                             ; 9058      ;
@@ -206,7 +206,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 9052      ;
-; Total fan-out                               ; 57745     ;
+; Total fan-out                               ; 57701     ;
 ; Average fan-out                             ; 3.14      ;
 +---------------------------------------------+-----------+
 
@@ -216,9 +216,9 @@ applicable agreement for further details.
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
-; |main_module               ; 9310 (8193)       ; 9058 (8823)  ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |main_module                  ; work         ;
+; |main_module               ; 9281 (8168)       ; 9058 (8823)  ; 0           ; 0            ; 0       ; 0         ; 20   ; 0            ; |main_module                  ; work         ;
 ;    |keyboard:kbrd|         ; 29 (29)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|keyboard:kbrd    ; work         ;
-;    |mammal:mml|            ; 504 (504)         ; 161 (161)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:mml       ; work         ;
+;    |mammal:mml|            ; 500 (500)         ; 161 (161)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|mammal:mml       ; work         ;
 ;    |sevensegment:ss1|      ; 34 (34)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|sevensegment:ss1 ; work         ;
 ;    |vga_sync:vga|          ; 550 (550)         ; 22 (22)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |main_module|vga_sync:vga     ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------+--------------+
@@ -343,7 +343,7 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Sun Jan 21 18:30:20 2024
+    Info: Processing started: Sun Jan 21 18:57:14 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file mammal.sv
@@ -396,14 +396,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "pushbutton"
-Info (21057): Implemented 16284 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 16279 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 16 output pins
-    Info (21061): Implemented 16264 logic cells
+    Info (21061): Implemented 16259 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Sun Jan 21 18:30:48 2024
-    Info: Elapsed time: 00:00:28
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Sun Jan 21 18:57:43 2024
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:22
 
 

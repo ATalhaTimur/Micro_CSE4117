@@ -19,11 +19,11 @@ localparam KEYBOARD 			= 12'h900;
 localparam SEVENSEG 			= 12'hb00;
 localparam KEYBOARD_STATUS = 12'h901;
 //=================================================
-localparam VGA_SPACESHIP_X = 12'hd00;
-localparam VGA_SPACESHIP_Y = 12'hd01;
-localparam VGA_PLANET_X    = 12'hd02;
-localparam VGA_PLANET_Y    = 12'hd03;
-localparam VGA_INTACK		= 12'hd04;
+localparam VGA_SPACESHIP_X = 12'ha00;
+localparam VGA_SPACESHIP_Y = 12'ha01;
+localparam VGA_PLANET_X    = 12'ha02;
+localparam VGA_PLANET_Y    = 12'ha03;
+localparam VGA_INTACK		= 12'ha04;
 //=================================================
 localparam CLOCK_DATA		= 12'h500;
 localparam CLOCK_STATUS		= 12'h501;
@@ -245,69 +245,69 @@ always_ff @(posedge clk) //data output port of the cpu
 				else if (CLOCK_STATUS == address)
 					 clk1 <= 0;
 
-				else if (address == 12'h700)
+				else if (address == 12'h800)
 					spaceship_bitmap[0] <= data_out;
-				else if (address == 12'h701)
+				else if (address == 12'h801)
 					spaceship_bitmap[1] <= data_out;
-				else if (address == 12'h702)
+				else if (address == 12'h802)
 					spaceship_bitmap[2] <= data_out;
-				else if (address == 12'h703)
+				else if (address == 12'h803)
 					spaceship_bitmap[3] <= data_out;
-				else if (address == 12'h704)
+				else if (address == 12'h804)
 					spaceship_bitmap[4] <= data_out;
-				else if (address == 12'h705)
+				else if (address == 12'h805)
 					spaceship_bitmap[5] <= data_out;
-				else if (address == 12'h706)
+				else if (address == 12'h806)
 					spaceship_bitmap[6] <= data_out;
-				else if (address == 12'h707)
+				else if (address == 12'h807)
 					spaceship_bitmap[7] <= data_out;
-				else if (address == 12'h708)
+				else if (address == 12'h808)
 					spaceship_bitmap[8] <= data_out;
-				else if (address == 12'h709)
+				else if (address == 12'h809)
 					spaceship_bitmap[9] <= data_out;
-				else if (address == 12'h70a)
+				else if (address == 12'h80a)
 					spaceship_bitmap[10] <= data_out;
-				else if (address == 12'h70b)
+				else if (address == 12'h80b)
 					spaceship_bitmap[11] <= data_out;
-				else if (address == 12'h70c)
+				else if (address == 12'h80c)
 					spaceship_bitmap[12] <= data_out;
-				else if (address == 12'h70d)
+				else if (address == 12'h80d)
 					spaceship_bitmap[13] <= data_out;
-				else if (address == 12'h70e)
+				else if (address == 12'h80e)
 					spaceship_bitmap[14] <= data_out;
-				else if (address == 12'h70f)
+				else if (address == 12'h80f)
 					spaceship_bitmap[15] <= data_out;	
-				else if (address == 12'h710)
+				else if (address == 12'h810)
 					planet_bitmap[0] <= data_out;
-				else if (address == 12'h711)
+				else if (address == 12'h811)
 					planet_bitmap[1] <= data_out;
-				else if (address == 12'h712)
+				else if (address == 12'h812)
 					planet_bitmap[2] <= data_out;
-				else if (address == 12'h713)
+				else if (address == 12'h813)
 					planet_bitmap[3] <= data_out;
-				else if (address == 12'h714)
+				else if (address == 12'h814)
 					planet_bitmap[4] <= data_out;
-				else if (address == 12'h715)
+				else if (address == 12'h815)
 					planet_bitmap[5] <= data_out;
-				else if (address == 12'h716)
+				else if (address == 12'h816)
 					planet_bitmap[6] <= data_out;
-				else if (address == 12'h717)
+				else if (address == 12'h817)
 					planet_bitmap[7] <= data_out;
-				else if (address == 12'h718)
+				else if (address == 12'h818)
 					planet_bitmap[8] <= data_out;
-				else if (address == 12'h719)
+				else if (address == 12'h819)
 					planet_bitmap[9] <= data_out;
-				else if (address == 12'h71a)
+				else if (address == 12'h81a)
 					planet_bitmap[10] <= data_out;
-				else if (address == 12'h71b)
+				else if (address == 12'h81b)
 					planet_bitmap[11] <= data_out;
-				else if (address == 12'h71c)
+				else if (address == 12'h81c)
 					planet_bitmap[12] <= data_out;
-				else if (address == 12'h71d)
+				else if (address == 12'h81d)
 					planet_bitmap[13] <= data_out;
-				else if (address == 12'h71e)
+				else if (address == 12'h81e)
 					planet_bitmap[14] <= data_out;
-				else if (address == 12'h71f)
+				else if (address == 12'h81f)
 					planet_bitmap[15] <= data_out;
 			end
 	end
