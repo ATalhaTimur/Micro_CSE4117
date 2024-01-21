@@ -1,5 +1,5 @@
 Fitter report for FinalProject
-Sun Jan 21 18:59:17 2024
+Sun Jan 21 20:24:59 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -69,7 +69,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Fitter Summary                                                                  ;
 +------------------------------------+--------------------------------------------+
-; Fitter Status                      ; Successful - Sun Jan 21 18:59:17 2024      ;
+; Fitter Status                      ; Successful - Sun Jan 21 20:24:59 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; FinalProject                               ;
 ; Top-level Entity Name              ; main_module                                ;
@@ -156,12 +156,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 4.21        ;
+; Average used               ; 4.05        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;  64.1%      ;
+;     Processors 2-6         ;  60.9%      ;
 ;     Processors 7-12        ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -2718,31 +2718,31 @@ Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "vsync_input" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:06
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:05
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:04
 Info (170191): Fitter placement operations beginning
 Info (170137): Fitter placement was successful
-Info (170192): Fitter placement operations ending: elapsed time is 00:00:17
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:16
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 22% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 54% of the available device resources in the region that extends from location X21_Y11 to location X31_Y22
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:54
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:50
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 7.11 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 8.03 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:04
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:03
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file C:/Users/talha/Desktop/Verilog_part/Micro_CSE4117/FPGA_Final/output_files/FinalProject.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 5736 megabytes
-    Info: Processing ended: Sun Jan 21 18:59:19 2024
-    Info: Elapsed time: 00:01:35
-    Info: Total CPU time (on all processors): 00:01:10
+    Info: Processing ended: Sun Jan 21 20:25:00 2024
+    Info: Elapsed time: 00:01:28
+    Info: Total CPU time (on all processors): 00:01:20
 
 
 +----------------------------+

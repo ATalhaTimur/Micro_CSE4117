@@ -9,22 +9,22 @@
 		p_y: 42
 		is_p_up: 1
 		is_p_right: 1
-		ssbm0: 0x0080
-        ssbm1: 0x01C0
-        ssbm2: 0x01C0
-        ssbm3: 0x01C0
-        ssbm4: 0x01C0
-        ssbm5: 0x03E0
-        ssbm6: 0x07F0
-        ssbm7: 0x0FF8
-        ssbm8: 0x1FFC
-        ssbm9: 0x01C0
-        ssbm10: 0x01C0
-        ssbm11: 0x01C0
-        ssbm12: 0x01C0
-        ssbm13: 0x03E0
-        ssbm14: 0x07F0
-        ssbm15: 0x01C0
+		spcbm0: 0x0080
+        spcbm1: 0x01C0
+        spcbm2: 0x01C0
+        spcbm3: 0x01C0
+        spcbm4: 0x01C0
+        spcbm5: 0x03E0
+        spcbm6: 0x07F0
+        spcbm7: 0x0FF8
+        spcbm8: 0x1FFC
+        spcbm9: 0x01C0
+        spcbm10: 0x01C0
+        spcbm11: 0x01C0
+        spcbm12: 0x01C0
+        spcbm13: 0x03E0
+        spcbm14: 0x07F0
+        spcbm15: 0x01C0
 	pbm0: 0x07E0
         pbm1: 0x1FF8
         pbm2: 0x3FFC
@@ -107,67 +107,67 @@
 		ld 1 1
 		st 0 1
 		ldi 0 0x800
-		ldi 1 ssbm0
+		ldi 1 spcbm0
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm1
+		ldi 1 spcbm1
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm2
+		ldi 1 spcbm2
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm3
+		ldi 1 spcbm3
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm4
+		ldi 1 spcbm4
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm5
+		ldi 1 spcbm5
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm6
+		ldi 1 spcbm6
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm7
+		ldi 1 spcbm7
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm8
+		ldi 1 spcbm8
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm9
+		ldi 1 spcbm9
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm10
+		ldi 1 spcbm10
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm11
+		ldi 1 spcbm11
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm12
+		ldi 1 spcbm12
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm13
+		ldi 1 spcbm13
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm14
+		ldi 1 spcbm14
 		ld 1 1
 		st 0 1
 		inc 0
-		ldi 1 ssbm15
+		ldi 1 spcbm15
 		ld 1 1
 		st 0 1
 		ldi 7 0x7ff
