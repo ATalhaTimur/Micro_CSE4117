@@ -1,19 +1,20 @@
 module vga_sync (
-	input logic        clk,
-   output logic       hsync,
-   output logic       vsync,
-   output logic [2:0] rgb,
-	input logic [9:0] x_spaceship,
-	input logic [9:0] y_spaceship,
-	input logic [9:0] x_planet,
-	input logic [9:0] y_planet
+	input logic 	clk,
+	input logic 	ack,
+	output logic 	interrupt,
+   output logic	hsync,
+   output logic	vsync,
+   output logic [2:0]	rgb,
+	input logic [15:0] 	spaceship_x,
+	input logic [15:0] 	spaceship_y,
+	input logic [15:0] 	planet_x,
+	input logic [15:0] 	planet_y,
+	input logic [15:0] 	spaceship_bitmap[0:15],
+	input logic [15:0] 	planet_bitmap[0:15]
 );
 
 logic pixel_tick, video_on;
-logic [9:0] h_count;
-logic [9:0] v_count;
-logic [15:0] spaceship_bitmap[0:15];
-logic [15:0] planet_bitmap[0:15];
+logic [9:0] h_count, v_count;
 
 localparam HD       = 640, //horizontal display area
 			  HF       = 48,  //horizontal front porch
@@ -25,8 +26,6 @@ localparam HD       = 640, //horizontal display area
 			  VFB      = 2,   //vertical flyback
 			  LINE_END = HF+HD+HB+HFB-1,
 			  PAGE_END = VT+VD+VB+VFB-1;
-			  /*LINE_END = 640,
-			  PAGE_END = 480;*/
 
 always_ff @(posedge clk)
 	begin
@@ -55,26 +54,26 @@ always_ff @(posedge clk)
 //== origin of display area is at (h_count, v_count) = (0,0)===
 always_comb
 	begin
-		rgb = 3'b000; // Arka plan rengi (yeÃƒâ€¦Ã…Â¸il)
+		rgb = 3'b000;
 		if ((h_count < HD) && (v_count < VD))
 			begin
-				if ((h_count >= x_spaceship) && (h_count < x_spaceship + 16) &&
-				(v_count >= y_spaceship) && (v_count < y_spaceship + 16) &&
-				spaceship_bitmap[v_count - y_spaceship][h_count - x_spaceship])
+				if ((h_count >= spaceship_x) && (h_count < spaceship_x + 16) &&
+					 (v_count >= spaceship_y) && (v_count < spaceship_y + 16) &&
+					  spaceship_bitmap[v_count - spaceship_y][h_count - spaceship_x])
 					begin
 						rgb = 3'b100;
 					end
 					
-				else if ((h_count >= x_planet) && (h_count < x_planet + 16) &&
-							(v_count >= y_planet) && (v_count < y_planet + 16) &&
-							planet_bitmap[v_count - y_planet][h_count - x_planet])
+				else if ((h_count >= planet_x) && (h_count < planet_x + 16) &&
+							(v_count >= planet_y) && (v_count < planet_y + 16) &&
+							 planet_bitmap[v_count - planet_y][h_count - planet_x])
 					begin
-						rgb = 3'b011;
+						rgb = 3'b110;
 					end
 					
 				else
 					begin
-						rgb = 3'b111;
+						rgb = 3'b010;
 					end
 			end
 			
@@ -85,45 +84,21 @@ always_comb
 assign hsync = (h_count >= (HD+HB) && h_count <= (HFB+HD+HB-1));
 assign vsync = (v_count >= (VD+VB) && v_count <= (VD+VB+VFB-1));
 
+always_ff @(posedge clk) // I'm trying to integrate interrupt
+	begin
+		if ((vsync == 1'b0) && (interrupt == 1'b0))
+			begin
+				interrupt <= 1'b1;
+			end
+			
+		else if (ack && (interrupt == 1'b1))
+			begin
+				interrupt <= 1'b0;
+			end
+	end
+
 initial
 	begin
-		// Uzay gemisi bitmapi
-		spaceship_bitmap[0]  = 16'b0000000010000000;
-		spaceship_bitmap[1]  = 16'b0000000111000000;
-		spaceship_bitmap[2]  = 16'b0000000111000000;
-		spaceship_bitmap[3]  = 16'b0000000111000000;
-		spaceship_bitmap[4]  = 16'b0000000111000000;
-		spaceship_bitmap[5]  = 16'b0000001111100000;
-		spaceship_bitmap[6]  = 16'b0000011111110000;
-		spaceship_bitmap[7]  = 16'b0000111111111000;
-		spaceship_bitmap[8]  = 16'b0001111111111100;
-		spaceship_bitmap[9]  = 16'b0000000111000000;
-		spaceship_bitmap[10] = 16'b0000000111000000;
-		spaceship_bitmap[11] = 16'b0000000111000000;
-		spaceship_bitmap[12] = 16'b0000000111000000;
-		spaceship_bitmap[13] = 16'b0000001111100000;
-		spaceship_bitmap[14] = 16'b0000011111110000;
-		spaceship_bitmap[15] = 16'b0000000111000000;
-		
-		planet_bitmap[0]  	= 16'b0000011111100000;
-		planet_bitmap[1]  	= 16'b0001111111111000;
-		planet_bitmap[2]  	= 16'b0011111111111100;
-		planet_bitmap[3]  	= 16'b0111111111111110;
-		planet_bitmap[4]  	= 16'b0111111111111110;
-		planet_bitmap[5]  	= 16'b1111111111111111;
-		planet_bitmap[6]  	= 16'b1111111111111111;
-		planet_bitmap[7]  	= 16'b1111111111111111;
-		planet_bitmap[8]  	= 16'b1111111111111111;
-		planet_bitmap[9]  	= 16'b1111111111111111;
-		planet_bitmap[10] 	= 16'b0111111111111110;
-		planet_bitmap[11] 	= 16'b0111111111111110;
-		planet_bitmap[12] 	= 16'b0011111111111100;
-		planet_bitmap[13] 	= 16'b0001111111111000;
-		planet_bitmap[14] 	= 16'b0000011111100000;
-		planet_bitmap[15] 	= 16'b0000000000000000;
-	
-		
-
 		h_count = 0;
 		v_count = 0;
 		pixel_tick = 0;

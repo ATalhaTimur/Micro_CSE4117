@@ -5,56 +5,65 @@ module main_module (
 	output logic hsync,
 	output logic vsync,
 	output logic [2:0] rgb,
-	//---output to seven segment display
+	// seven segment 
 	output logic [6:0] display,
 	output logic [3:0] grounds,
-	input pushbutton //may be used as clock
+	input pushbutton //may be used for interrupt
 );
-
-logic [15:0] data_all;
-logic [8:0] keyb_out;
-logic [3:0] keyout;
-logic ack;
-logic [31:0] clk1;
-
+//=================================================
+//memory map is defined here
+//=================================================
+localparam BEGINMEM 			= 12'h000;
+localparam ENDMEM 			= 12'h1ff;
+localparam KEYBOARD 			= 12'h900;
+localparam SEVENSEG 			= 12'hb00;
+localparam KEYBOARD_STATUS = 12'h901;
+//=================================================
+localparam VGA_SPACESHIP_X = 12'hd00;
+localparam VGA_SPACESHIP_Y = 12'hd01;
+localparam VGA_PLANET_X    = 12'hd02;
+localparam VGA_PLANET_Y    = 12'hd03;
+localparam VGA_INTACK		= 12'hd04;
+//=================================================
+localparam CLOCK_DATA		= 12'h500;
+localparam CLOCK_STATUS		= 12'h501;
+//=================================================
+// cpu and i/o input out variable  
+logic [15:0] clk_data;
+logic [15:0] data_out; 
+logic [15:0] data_in;
+logic [15:0] ss7_out;
+logic [11:0] address;
+logic [15:0] keyb_out;
+logic [25:0] clk1;
+//=================================================
+// variable for write vga (cpu to vga)
 logic [15:0] spaceship_x;
 logic [15:0] spaceship_y;
-logic [15:0] prev_spaceship_x;
-logic [15:0] prev_spaceship_y;
 logic [15:0] planet_x;
 logic [15:0] planet_y;
+//=================================================
+// Bitmap for planet and spaceship_bitmap
 logic [15:0] spaceship_bitmap[0:15];
 logic [15:0] planet_bitmap[0:15];
+//=================================================
+// Dinamic variable for planet 
 logic isUp; // if isUp == 1, planet goes up, else goes down
 logic isRight; // if isRight == 1, planet goes right, else goes left
-
-//memory map is defined here
-localparam BEGINMEM = 12'h000;
-localparam ENDMEM = 12'h1ff;
-localparam KEYBOARD = 12'h900;
-
-localparam VGA_SPACESHIP_X = 12'hd00; // Adjust the address based on your memory map
-localparam VGA_SPACESHIP_Y = 12'hd01; // Adjust the address based on your memory map
-localparam VGA_PLANET_X    = 12'hd02; // Adjust the address based on your memory map
-localparam VGA_PLANET_Y    = 12'hd03; // Adjust the address based on your memory map
-
-
-// seven segment icin sonradan silinebilir
-localparam SEVENSEG = 12'hb00;
-logic [15:0] ss7_out;
-
-//  memory chip
-logic [15:0] memory [0:150]; 
-
-// cpu's input-output pins
-logic [15:0] data_out;
-logic [15:0] data_in;
-logic [12:0] address;
+//=================================================
+// INT and memory write variable
 logic memwt;
-
-// sonradan kendi olusturduklarim
 logic INT;
 logic intack;
+logic keyb_ack;
+logic vga_ack;
+logic vga_interrupt;
+//=================================================
+//  memory chip
+logic [15:0] memory [0:511]; 
+//====== pic ======================================
+logic irq0, irq1, irq2, irq3, irq4, irq5, irq6, irq7;
+//=================================================
 
 sevensegment ss1 (
 	.din(ss7_out), 
@@ -63,205 +72,255 @@ sevensegment ss1 (
 	.clk(clk)
 );
 
-keyboard  kb1(
+keyboard  kbrd(
 	.clk(clk),
 	.ps2d(ps2d), 
 	.ps2c(ps2c), 
 	.dout(keyb_out), 
-	.ack(ack)
+	.ack(keyb_ack)
 );
 
-vga_sync vg1 (
-	.clk(clk), 
-	.hsync(hsync), 
-	.vsync(vsync), 
+vga_sync vga (
+	.clk(clk),
+	.ack(vga_ack),
+	.interrupt(vga_interrupt),
+	.hsync(hsync),
+	.vsync(vsync),
 	.rgb(rgb),
-	.x_spaceship(spaceship_x),
-	.y_spaceship(spaceship_y),
-	.x_planet(planet_x),
-	.y_planet(planet_y)
+	.spaceship_x(spaceship_x),
+	.spaceship_y(spaceship_y),
+	.planet_x(planet_x),
+	.planet_y(planet_y),
+	.spaceship_bitmap(spaceship_bitmap),
+	.planet_bitmap(planet_bitmap)
 );
 
-mammal m1 (
-	.clk(clk), 
-	.data_in(data_in), 
-	.data_out(data_out), 
-	.address(address), 
+mammal mml (
+	.clk(clk),
+	.data_in(data_in),
+	.data_out(data_out),
+	.address(address),
 	.memwt(memwt),
-	.INT(INT), 
+	.INT(INT),
 	.intack(intack)
 );
 
+//===============IRQ's==============
+always_comb
+	begin
+      irq0 = 1'b0;
+      irq1 = 1'b0;
+      irq2 = vga_interrupt;
+      irq3 = 1'b0;
+      irq4 = 1'b0;
+      irq5 = 1'b0;
+      irq6 = 1'b0;
+      irq7 = 1'b0;
+   end
+	
+//we assume that the devices hold their irq until being serviced by cpu
+assign INT = irq0 | irq1 | irq2 | irq3 | irq4 | irq5 | irq6 | irq7; 
+
 //multiplexer for cpu input
 always_comb
-	begin		
-		if ((BEGINMEM <= address) && (address <= ENDMEM))
+	begin
+		keyb_ack = 0;
+		vga_ack = 0;
+		if(intack == 0)
 			begin
-				data_in = memory[address];
-				ack = 0;
+				keyb_ack = 0;
+				vga_ack = 0;
+				if ((BEGINMEM <= address) && (address <= ENDMEM))
+					begin
+						data_in = memory[address];
+					end
+			
+				else if (address == KEYBOARD_STATUS)
+					begin    
+						data_in = keyb_out;
+						keyb_ack = 0;
+					end
+					
+				else if (address == KEYBOARD)
+					begin
+						keyb_ack = 1;
+						data_in = keyb_out;
+						
+					end
+				
+				else if (address == VGA_SPACESHIP_X)
+					begin
+						vga_ack = 1;
+						data_in = spaceship_x;
+						
+					end
+					
+				else if (address == VGA_SPACESHIP_Y)
+					begin
+						vga_ack = 1;
+						data_in = spaceship_y;
+						
+					end
+				
+				else if (address == VGA_PLANET_X)
+					begin
+						vga_ack = 1;
+						data_in = planet_x;
+						
+					end
+					
+				else if (address == VGA_PLANET_Y)
+					begin
+						vga_ack = 1;
+						data_in = planet_y;
+						
+					end
+
+				else if (address == CLOCK_STATUS)
+					begin
+						vga_ack = 1;
+						data_in = {15'b0, clk1[22]};
+						
+					end
+				
+				else if (address == CLOCK_DATA)
+					begin
+						data_in = clk_data;
+					end
+
+				else
+					begin
+						data_in = 16'h1111;
+					end
 			end
 			
-		else if (address == KEYBOARD + 1)
-			begin    
-				data_in = keyb_out;
-				ack = 0;
-			end
-			
-		else if (address == KEYBOARD)
-			begin
-				data_in = keyb_out;
-				ack = 1;
-			end
-		
-		else if (address == VGA_SPACESHIP_X)
-			begin
-				data_in = spaceship_x;
-				ack = 0;
-			end
-			
-		else if (address == VGA_SPACESHIP_Y)
-			begin
-				data_in = spaceship_y;
-				ack = 0;
-			end
-	
 		else
 			begin
-				data_in = 16'h0000; //any number
-				ack = 0;
-			end
-	end
-	
-always_ff @(posedge clk)
-	begin
-		clk1 <= clk1 + 1;
-		
-		if (clk1[25])
-			begin
-				clk1 <= 0;
-				if (isRight)
-					begin
-						if ((620 <= planet_x) && (planet_x <= 640))
-							begin
-								isRight <= 0;
-								planet_x <= 620;
-							end
-						else
-							begin
-								planet_x <= planet_x + 20;
-							end
-					end
-					
-				else if (isRight == 0)
-					begin
-						if (planet_x <= 0)
-							begin
-								isRight <= 1;
-								planet_x <= 0;
-							end
-						else
-							begin
-								planet_x <= planet_x - 20;
-							end
-					end
-					
-				 if (isUp)
-					begin
-						if ((470 <= planet_y) && (planet_y <= 480))
-							begin
-								isUp <= 0;
-								planet_y <= 470;
-							end
-						else
-							begin
-								planet_y <= planet_y + 10;
-							end
-					end
-					
-				else if (isUp == 0)
-					begin
-						if (planet_y <= 0)
-							begin
-								isUp <= 1;
-								planet_y <= 0;
-							end
-						else
-							begin
-								planet_y <= planet_y - 10;
-							end
-					end
+				if (irq0)
+					data_in = 16'h0;
+				else if (irq1)
+					data_in = 16'h1;
+				else if (irq2)
+					data_in = 16'h2;
+				else if (irq3)
+					data_in = 16'h3;
+				else if (irq4)
+					data_in = 16'h4;
+				else if (irq5)
+					data_in = 16'h5;
+				else if (irq6)
+					data_in = 16'h6;
+				else
+					data_in = 16'h7;
 			end
 	end
 
 //multiplexer for cpu output 
 always_ff @(posedge clk) //data output port of the cpu
 	begin
+		clk1 <= clk1 + 1;
 		if (memwt)
 			begin
 				if ((BEGINMEM <= address) && (address <= ENDMEM))
-					begin
-						memory[address] <= data_out;
-					end
+					memory[address] <= data_out;
 					
 				else if (VGA_SPACESHIP_X == address)
-					begin
-						// Update x position of the spaceship
-						if (data_out <= 0)
-								spaceship_x <= 4;
-						else if (data_out > 624)
-							spaceship_x <= 624;
-						else
-							spaceship_x <= data_out;
-					end
+					spaceship_x <= data_out;
 					
 				else if (VGA_SPACESHIP_Y == address)
-					begin
-						// Update y position of the spaceship
-						if (data_out <= 0)
-							spaceship_y <= 4;
-						else if (data_out > 464)
-							spaceship_y <= 464;
-						else
-							spaceship_y <= data_out;
-					end
+					spaceship_y <= data_out;
 					
 				else if (VGA_PLANET_X == address)
-					begin
-						
-					end
+					planet_x <= data_out;
 					
 				else if (VGA_PLANET_Y == address)
-					begin
-					end
-					
-					
-				// seven segment icin sonradan silinebilir
-				else if (SEVENSEG == address)
-					begin
+					planet_y <= data_out;
 						
-						ss7_out <= data_out;
-					end
+				else if (SEVENSEG == address)
+					ss7_out <= data_out;
+					
+				else if (CLOCK_DATA == address)
+					clk_data <= data_out;
+					
+				else if (CLOCK_STATUS == address)
+					 clk1 <= 0;
+
+				else if (address == 12'h700)
+					spaceship_bitmap[0] <= data_out;
+				else if (address == 12'h701)
+					spaceship_bitmap[1] <= data_out;
+				else if (address == 12'h702)
+					spaceship_bitmap[2] <= data_out;
+				else if (address == 12'h703)
+					spaceship_bitmap[3] <= data_out;
+				else if (address == 12'h704)
+					spaceship_bitmap[4] <= data_out;
+				else if (address == 12'h705)
+					spaceship_bitmap[5] <= data_out;
+				else if (address == 12'h706)
+					spaceship_bitmap[6] <= data_out;
+				else if (address == 12'h707)
+					spaceship_bitmap[7] <= data_out;
+				else if (address == 12'h708)
+					spaceship_bitmap[8] <= data_out;
+				else if (address == 12'h709)
+					spaceship_bitmap[9] <= data_out;
+				else if (address == 12'h70a)
+					spaceship_bitmap[10] <= data_out;
+				else if (address == 12'h70b)
+					spaceship_bitmap[11] <= data_out;
+				else if (address == 12'h70c)
+					spaceship_bitmap[12] <= data_out;
+				else if (address == 12'h70d)
+					spaceship_bitmap[13] <= data_out;
+				else if (address == 12'h70e)
+					spaceship_bitmap[14] <= data_out;
+				else if (address == 12'h70f)
+					spaceship_bitmap[15] <= data_out;	
+				else if (address == 12'h710)
+					planet_bitmap[0] <= data_out;
+				else if (address == 12'h711)
+					planet_bitmap[1] <= data_out;
+				else if (address == 12'h712)
+					planet_bitmap[2] <= data_out;
+				else if (address == 12'h713)
+					planet_bitmap[3] <= data_out;
+				else if (address == 12'h714)
+					planet_bitmap[4] <= data_out;
+				else if (address == 12'h715)
+					planet_bitmap[5] <= data_out;
+				else if (address == 12'h716)
+					planet_bitmap[6] <= data_out;
+				else if (address == 12'h717)
+					planet_bitmap[7] <= data_out;
+				else if (address == 12'h718)
+					planet_bitmap[8] <= data_out;
+				else if (address == 12'h719)
+					planet_bitmap[9] <= data_out;
+				else if (address == 12'h71a)
+					planet_bitmap[10] <= data_out;
+				else if (address == 12'h71b)
+					planet_bitmap[11] <= data_out;
+				else if (address == 12'h71c)
+					planet_bitmap[12] <= data_out;
+				else if (address == 12'h71d)
+					planet_bitmap[13] <= data_out;
+				else if (address == 12'h71e)
+					planet_bitmap[14] <= data_out;
+				else if (address == 12'h71f)
+					planet_bitmap[15] <= data_out;
 			end
 	end
 
-
 initial 
     begin
-			data_all = 0;			
-			ack = 0;
-			// seven segment icin sonradan silinebilir
-			ss7_out = 16'h3136;
+			vga_ack = 0;
+			keyb_ack = 0;		
 			clk1 = 0;
-			spaceship_x = 500;
-			spaceship_y = 180;
 			isUp = 1;
 			isRight = 1;
-			planet_x = 40;
-			planet_y = 40;
-			
-			
-			
-
+			clk_data = 0;
+			ss7_out = 16'h1515;	
 			$readmemh("ram.dat", memory);
     end
 

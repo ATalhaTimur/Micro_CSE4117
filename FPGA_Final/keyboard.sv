@@ -9,7 +9,7 @@ module keyboard(
 localparam [1:0] 
     IDLE = 2'b00,
     READ = 2'b01,
-    PARSE = 2'b10,
+    DBC = 2'b10,
     END =  2'b11;
 
 logic [7:0] filter;
@@ -52,12 +52,12 @@ begin
             begin
                 char <= {ps2d, char[10:1]};
                 if (count == 0)
-                    state <= PARSE;
+                    state <= DBC;
                 else
                     count <= count - 1;
             end
 
-        PARSE:
+        DBC:
             begin
                 // Check if the key was released (F0 code)
                 if (char[8:1] == 8'hF0)
