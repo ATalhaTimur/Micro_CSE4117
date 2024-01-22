@@ -6,6 +6,7 @@ module main_module (
 	output logic [3:0] grounds,
 	output logic [6:0] display
 );
+// This project was made by Abdulkerim Talha Timur.
 
 //====memory map is defined here====
 localparam BEGINMEM=12'h000;

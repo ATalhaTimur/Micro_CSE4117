@@ -234,22 +234,22 @@ clk	ldi 1 0x0501
 		jmp p_upy
 		jmp loop
 
-p_up_r	ldi 4 is_p_up
+p_upr	ldi 4 is_p_up
 		ldi 1 0x0000
 		st 4 1
 		jmp clk
 
-p_dow_r	ldi 4 is_p_up
+p_dowr	ldi 4 is_p_up
 		ldi 1 0x0001
 		st 4 1
 		jmp clk
 
-p_rig_r	ldi 4 is_p_right
+p_rigr	ldi 4 is_p_right
 		ldi 1 0x0000
 		st 4 1
 		jmp clk
 
-p_lef_r	ldi 4 is_p_right
+p_lefr	ldi 4 is_p_right
 		ldi 1 0x0001
 		st 4 1
 		jmp clk
@@ -267,7 +267,7 @@ p_upy	ldi 1 is_p_up
 		ld 2 2
 		mov 3 4
 		sub 3 3 2
-		jz p_up_r
+		jz p_upr
         ldi 1 0x0a03
         st 1 4
         jmp p_rx
@@ -280,7 +280,7 @@ p_dy	ldi 4 0x0a03
 		ld 2 2
 		mov 3 4
 		sub 3 3 2
-		jz p_dow_r
+		jz p_dowr
         ldi 1 0x0a03
         st 1 4
         jmp p_rx
@@ -298,7 +298,7 @@ p_rx	ldi 1 is_p_right
 		ld 2 2
 		mov 3 4
 		sub 3 3 2
-		jz p_rig_r
+		jz p_rigr
         ldi 1 0x0a02
         st 1 4
 		jmp loop
@@ -311,7 +311,7 @@ p_lx	ldi 4 0x0a02
 		ld 2 2
 		mov 3 4
 		sub 3 3 2
-		jz p_lef_r
+		jz p_lefr
         ldi 1 0x0a02
         st 1 4
 		jmp loop

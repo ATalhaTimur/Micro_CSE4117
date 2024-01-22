@@ -4,7 +4,7 @@ module prj1(
     output logic [3:0] o_grounds,
     output logic [6:0] o_display	 
 );
-// This project was made by Abdulkerim Talha Timur, Tayfur Şafak Gencay, Kutay Başkurt.
+// This project was made by Abdulkerim Talha Timur, Tayfur Şafak Gencay.
   logic [15:0] data;
   logic [1:0] PushButtonStates;
   logic [1:0] LeftPushButtonBuffer;
