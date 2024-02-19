@@ -4,6 +4,7 @@
 ![WhatsApp Görsel 2024-01-22 saat 04 52 48_9401df08](https://github.com/ATalhaTimur/Micro_CSE4117/assets/93510585/3d9e9fca-8107-40a4-84d4-0223f6aa809d)
 
 HW1
+
 In this assignment, you will increase the data on the seven-segment display. You will also
 manipulate scan speed. For this purpose, you will use two push buttons that are on the DE0-
 nano FPGA board.
@@ -19,6 +20,7 @@ the seven-segment display will be seen.
 d. If you press it once more, go to a.
 
 HW2
+
 PART 2 (FPGA) (50 points or 75 points)
 You will implement in FPGA a system which has a CPU and its associated I/O circuits. You
 will also write the specified software that will run on this system.
