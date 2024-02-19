@@ -48,21 +48,37 @@ Spaceship bitmap will be 16 pixels wide and 16 pixels high, and will be exactly 
 of the screen at the start up. Its design is given below (or, you can design your own). It will
 be red.
 0000000010000000
+
 0000000111000000
+
 0000000111000000
+
 0000000111000000
+
 0000000111000000
+
 0000001111100000
+
 0000011111110000
+
 0000111111111000
+
 0001111111111100
+
 0000000111000000
+
 0000000111000000
+
 0000000111000000
+
 0000000111000000
+
 0000001111100000
+
 0000011111110000
+
 0000000111000000
+
 Planet bitmap is again 16x16, and it is of shape circle. Design one of your own. It is yellow. It
 will also start at the center of the VGA screen.
 Motion of spaceship
