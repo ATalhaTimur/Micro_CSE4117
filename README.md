@@ -119,10 +119,10 @@ else
 }
 Note that the spaceship will always be at the front of the planet.
 CPU will have two duties:
- During initialization, CPU will initialize spaceship_bitmap and planet_bitmap to the
+During initialization, CPU will initialize spaceship_bitmap and planet_bitmap to the
 appropriate figures. This will require 16 store operations for each bitmap. Also don’t
 forget that stack and IDT must be also initialized.
- During operation, CPU will change the registers x_spaceship, y_spaceship, x_planet,
+During operation, CPU will change the registers x_spaceship, y_spaceship, x_planet,
 y_planet for each frame, hence cause the spaceship and the planet to move.
 Communication between the Mammal CPU and the VGA module will be via interrupts. If CPU
 modifies the registers x_spaceship, y_spaceship, x_planet, y_planet while the cpu draws the
